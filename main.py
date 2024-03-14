@@ -5,3 +5,16 @@ def drawBoard(board):
     print('-+-+-')
     print(board[1] + '|' + board[2] + '|' + board[3])
 
+def inputPlayerLetter():
+
+def whoGoesFirst():
+
+def makeMove():
+
+def winner():
+
+def getPlayerMove():
+
+def getComputerMove():
+
+    
