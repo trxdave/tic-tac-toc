@@ -1,5 +1,8 @@
+print ("Welcome to Tic Tac Toe")
+print ("Here is the board layout:")
 
-def drawBoard(board):
+
+def printBoard():
     """ 
     Board is a list of 10 strings representing the board 
     """
@@ -8,6 +11,7 @@ def drawBoard(board):
     print(board[4] + '|' + board[5] + '|' + board[6])
     print('-+-+-')
     print(board[1] + '|' + board[2] + '|' + board[3])
+
 
 def playerLetter():
     """
@@ -32,12 +36,6 @@ def whoGoesFirst():
     else:
         return 'player'
 
-def makeMove():
 
-def winner():
-
-def getPlayerMove():
-
-def getComputerMove():
 
     
