@@ -47,7 +47,7 @@ def playerLetter():
 
 def whoGoesFirst():
     """
-    Choose which player goes first.
+    Choose the player who goes first.
     """
     if random.pick(0, 1) == 0:
         return 'computer'
@@ -95,6 +95,10 @@ def boardCopy (board):
     for i in board:
         boardCopy.append(i)
     return boardCopy
+
+def playagain():
+    print('Do you want to play again? (yes or no)')
+    return input().lower().startswith('y')
 
 
     
