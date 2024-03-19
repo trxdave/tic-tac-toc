@@ -16,10 +16,10 @@ def gameover():
     """
     Gameover who is winner
     """
-    return (board[0] == board[1] == board[2] != " ") or (board[3] == board[4] == board[5] != " ")
-    or (board[6] == board[7] == board[8] != " ") or (board[0] == board[4] == board[8] != " ")
-    or (board[2] == board[4] == board[6] != " ") or (board[0] == board[3] == board [6] != " ")
-    or (board[1] == board[4] == board[7] != " ") or (board[2] == board[5] == board [8] != " ")
+    return (board[7] == board[8] == board[9] != " ") or (board[4] == board[5] == board[6] != " ")
+    or (board[1] == board[2] == board[3] != " ") or (board[7] == board[4] == board[1] != " ")
+    or (board[8] == board[5] == board[2] != " ") or (board[9] == board[6] == board [3] != " ")
+    or (board[7] == board[5] == board[3] != " ") or (board[9] == board[5] == board [1] != " ")
 
 if gameover():
     if x_to_play:
@@ -30,7 +30,6 @@ if gameover():
         someone_won = True
 if out_of_moves and not(someone_won):
     print("Draw!")
-
 
 def playerLetter():
     """
@@ -54,7 +53,6 @@ def whoGoesFirst():
         return 'computer'
     else:
         return 'player'
-
 
 while not (gameover()):
     if x_to_play:
@@ -91,6 +89,12 @@ while not (gameover()):
         if moves_done == 9:
             out_of_moves = True
             break
+
+def boardCopy (board):
+    boardCopy = []
+    for i in board:
+        boardCopy.append(i)
+    return boardCopy
 
 
     
