@@ -92,4 +92,7 @@ while True:
         # Change turns
         x_to_play = not x_to_play
 
-    if input("Do you want to play again (y/n): ")
+    if input("Do you want to play again (y/n): ").lower() == 'y':
+        board = [" " for i in range(3 * 3)]
+    else:
+        break
