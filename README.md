@@ -1,9 +1,31 @@
-# tic-tac-toc
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-## Flowchart ##
+Welcome USER_NAME,
 
- The Tic-Tac-Toe game begins by asking the player to choose between X or O, after which both the player and computer take turns making moves. 
+This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
 
-![alt text](documents/flowchart/chart.png)
+## Reminders
 
-The flowcharts on the left demonstrate the series of events that occur during the player's turn, while the ones on the right represent what takes place during the computer's turn. Once the player or computer has made a move, the program checks whether they have won or caused a tie, and then switches turns. After the game is complete, the program prompts the player to decide whether they would like to play again.
+* Your code must be placed in the `run.py` file
+* Your dependencies must be placed in the `requirements.txt` file
+* Do not edit any of the other files or your code may not deploy properly
+
+## Creating the Heroku app
+
+When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+
+1. `heroku/python`
+2. `heroku/nodejs`
+
+You must then create a _Config Var_ called `PORT`. Set this to `8000`
+
+If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+
+Connect your GitHub repository and deploy as normal.
+
+## Constraints
+
+The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+
+-----
+Happy coding!
