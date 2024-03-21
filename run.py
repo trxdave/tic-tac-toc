@@ -4,11 +4,11 @@ def printBoard():
     """ 
     Print the tic-tac-toe board
     """
-    print(f'{board[6]} | {board[7]} | {board[8]}')
-    print('-+-+-')
-    print(f'{board[3]} | {board[4]} | {board[5]}')
-    print('-+-+-')
     print(f'{board[0]} | {board[1]} | {board[2]}')
+    print('-+-+-+-+-')
+    print(f'{board[3]} | {board[4]} | {board[5]}')
+    print('-+-+-+-+-')
+    print(f'{board[6]} | {board[7]} | {board[8]}')
 
 def gameover():
     """
@@ -35,12 +35,12 @@ def gameover():
 
     return False
 
-board = [" " for i in range(3 * 3)]
+
 
 while True:
     x_to_play = True
-    # X plays first
-    print_board()
+    board = [" " for i in range(3 * 3)]
+    printBoard()
     out_of_moves = False
     someone_won = False
 
@@ -70,10 +70,10 @@ while True:
         # Update the board
         board[move - 1] = player
         # Print the board
-        print_board(board)
+        printBoard()
 
         # Check if the game is over
-        if gameover(board) is not False:
+        if gameover() is not False:
             if x_to_play:
                 print(f"{player} wins!")
             else:
@@ -90,7 +90,9 @@ while True:
         # Change turns
         x_to_play = not x_to_play
 
-if input("Do you want to play again (y/n): ").lower() == 'y':
-    board = [" " for i in range(3 * 3)]
-else:
-    break
+while True:
+    # gameplay code here
+    if input("Do you want to play again (y/n): ").lower() == 'n':
+        break
+
+# post-gameplay code here
