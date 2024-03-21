@@ -1,6 +1,4 @@
-print ("Welcome to Tic Tac Toe")
-print ("Here is the board layout:")
-
+import random
 
 def printBoard():
     """ 
@@ -93,6 +91,6 @@ while True:
         x_to_play = not x_to_play
 
     if input("Do you want to play again (y/n): ").lower() == 'y':
-        board = [" " for i in range(3 * 3)]
-    else:
-        break
+    board = [" " for i in range(3 * 3)]
+else:
+    break
