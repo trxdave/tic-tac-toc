@@ -8,17 +8,17 @@ def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
 
-print(Fore.YELLOW + "==========")
-print(Fore.BLUE + "Welcome to Tic Tac Toe!")
+print("==========")
+print("Welcome to Tic Tac Toe!")
 print("Please enter your name")
-print(Fore.YELLOW + "==========")
+print("==========")
 
 def printBoard():
     """
     Print the tic-tac-toe board
     """
-    print(Fore.RED + f"You are {player1}")
-    print(Fore.RED + "The First Player to get 3 in a row Wins!")
+    print(f"You are {player1}")
+    print("The First Player to get 3 in a row Wins!")
     print(f'{board[0]} | {board[1]} | {board[2]}')
     print('---------')
     print(f'{board[3]} | {board[4]} | {board[5]}')
@@ -106,23 +106,23 @@ while True:
         # Get input
         while True:
             try:
-                move = int(input(Fore.GREEN + f"Player {player}, enter your move (1-9)"))
+                move = int(input(f"Player {player}, enter your move (1-9)"))
                 if move < 1 or move > 9:
                     raise ValueError
                 if board[move - 1] == " ":
                     break
 
-                print(Fore.RED + "That cell is already occupied. Try again.")
+                print("That cell is already occupied. Try again.")
             except ValueError:
-                print(Fore.RED + "Invalid input. Please enter a number from 1 to 9")
+                print("Invalid input. Please enter a number from 1 to 9")
         # Update the board
         board[move - 1] = player
         # Check if the game is over
         if gameover() is not False:
             if x_to_play:
-                print(Fore.GREEN + f"{player} wins!")
+                print(f"{player} wins!")
             else:
-                print(Fore.GREEN + f"{computer} wins!")
+                print(f"{computer} wins!")
 
             someone_won = True
             out_of_moves = True
@@ -141,9 +141,9 @@ while True:
 
         if gameover() is not False:
             if x_to_play:
-                print(Fore.GREEN + f"{player} wins!")
+                print(f"{player} wins!")
             else:
-                print(Fore.GREEN + f"{computer} wins!")
+                print(f"{computer} wins!")
 
             someone_won = True
             out_of_moves = True
@@ -154,7 +154,7 @@ while True:
             out_of_moves = True
 
     # Ask if the user wants to play again
-    if input(Fore.YELLOW + "Do you want to play again (y/n): \n").lower() == 'n':
+    if input("Do you want to play again (y/n): \n").lower() == 'n':
         break
 
 # Exit the Game
