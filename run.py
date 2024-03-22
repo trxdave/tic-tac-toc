@@ -56,7 +56,7 @@ def computer_move():
     # Check if computer can win
     for i in range(3 * 3):
         if board[i] == " ":
-            board[i] = "0"
+            board[i] = "O"
             if gameover() == "O":
                 return
             board[i] = " "
@@ -68,12 +68,6 @@ def computer_move():
             if gameover() == "X":
                 return
             board[i] = " "
-
-    # Choose a random empty cell
-    while True:move = random.randrange(0, 3 * 3, 1)
-        if board[move] == " ":
-            board[move] = "O"
-            return
 
 while True:
     name = input('Please enter your name: \n')
@@ -159,6 +153,6 @@ while True:
 # Exit the Game
 print("Bye!")
 
-if __name__ == "__main__:
+if __name__ == "__main__":
     curses.wrapper()
     name()
