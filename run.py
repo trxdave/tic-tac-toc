@@ -69,6 +69,13 @@ def computer_move():
                 return
             board[i] = " "
 
+    # Choose a random empty cell
+    while True:
+        move = random.randrange(0, 3 * 3, 1)
+        if board[move] == " ":
+            board[move] = "O"
+            return
+
 while True:
     name = input('Please enter your name: \n')
     if name.isalpha():
