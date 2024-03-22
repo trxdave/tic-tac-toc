@@ -1,7 +1,21 @@
 import random
+import colorama
+import os
+
+def clear():
+    """
+    Clean up the function of the mess.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+print("==========")
+print("Welcome to Tic Tac Toe!")
+print("Please enter your name")
+print("==========")
 
 def printBoard():
-    """ 
+    """
     Print the tic-tac-toe board
     """
     print(f'{board[0]} | {board[1]} | {board[2]}')
@@ -35,7 +49,39 @@ def gameover():
 
     return False
 
+def computer_move():
+    """
+    Computer's move
+    """
+    # Check if computer can win
+    for i in range(3 * 3):
+        if board[i] == " ":
+            board[i] = "0"
+            if gameover() == "O":
+                return
+            board[i] = " "
 
+    # Check if player can win
+    for i in range(3 * 3):
+        if board[i] == " ":
+            board[i] = "X"
+            if gameover() == "X":
+                return
+            board[i] = " "
+
+    # Choose a random empty cell
+    while True:move = random.randrange(0, 3 * 3, 1)
+        if board[move] == " ":
+            board[move] = "O"
+            return
+
+while True:
+    name = input('Please enter your name: \n')
+    if name.isalpha():
+        print(f"Hello, {name}!")
+        break
+    else:
+        print(f"{get_name} is invalid. Please enter a valid name")
 
 while True:
     x_to_play = True
@@ -69,9 +115,7 @@ while True:
                 print("Invalid input. Please enter a number from 1 to 9")
         # Update the board
         board[move - 1] = player
-        # Print the board
-        printBoard()
-
+        
         # Check if the game is over
         if gameover() is not False:
             if x_to_play:
@@ -90,9 +134,31 @@ while True:
         # Change turns
         x_to_play = not x_to_play
 
-while True:
-    # gameplay code here
-    if input("Do you want to play again (y/n): ").lower() == 'n':
+        # Computer's move
+        computer_move()
+        printBoard()
+
+        if gameover() is not False:
+            if x_to_play:
+                print(f"{player} wins!")
+            else:
+                print(f"{computer} wins!")
+
+            someone_won = True
+            out_of_moves = True
+
+        # Check if there are any moves left
+        if not " " in board:
+            print("Draw")
+            out_of_moves = True
+
+    # Ask if the user wants to play again
+    if input("Do you want to play again (y/n): \n").lower() == 'n':
         break
 
-# post-gameplay code here
+# Exit the Game
+print("Bye!")
+
+if __name__ == "__main__:
+    curses.wrapper()
+    name()
