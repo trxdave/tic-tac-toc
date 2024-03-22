@@ -1,5 +1,4 @@
 import random
-import colorama
 import os
 
 def clear():
