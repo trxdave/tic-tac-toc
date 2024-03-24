@@ -1,4 +1,5 @@
 import random
+import curses
 import os
 
 def clear():
@@ -7,11 +8,11 @@ def clear():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
-def printBoard():
+def printing_Board(board):
     """
     Print the tic-tac-toe board
     """
-    print(f"You are {player1}")
+    print(f"You are {player}")
     print("The First Player to get 3 in a row Wins!")
     print(f'{board[0]} | {board[1]} | {board[2]}')
     print('---------')
@@ -19,7 +20,7 @@ def printBoard():
     print('---------')
     print(f'{board[6]} | {board[7]} | {board[8]}')
 
-def gameover():
+def gameover(board):
     """
     Gameover who is winner
     """
@@ -48,14 +49,23 @@ def intro():
     """
     Give a message for the player
     """
-    print("Welcome to play Tic Tac Toe!")
+    print("Welcome to Tic Tac Toe!")
+    print("This is a classic game where two players take turns marking spaces in a 3x3 grid.")
+    print("The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.")
+    print("You will be playing against the computer, which will be represented by 'O'. You will be 'X'.")
+    print("To make your move, simply enter a number from 1 to 9 corresponding to the position you want to mark on the board, as shown below:")
+    print(" 1 | 2 | 3 ")
+    print("---+---+---")
+    print(" 4 | 5 | 6 ")
+    print("---+---+---")
+    print(" 7 | 8 | 9 ")
+    print("Get ready to enjoy the game!\n")
     while True:
-    name_1 = input("Please enter your name: ")
+        name = input("Please enter your name: ")
     if name.isalpha():
         print(f"Hello, {name}!")
-        break
     else:
-        print(f"{get_name} is invalid. Please enter a valid name")
+        print(f"{name} is invalid. Please enter a valid name")
 
 def computer_move():
     """
@@ -84,10 +94,13 @@ def computer_move():
             board[move] = "O"
             return
 
-while True:
+def main(stdscr):
+    """
+    This is the main function of the Tic Tac Toe game.
+    """
     x_to_play = True
     board = [" " for i in range(3 * 3)]
-    printBoard()
+    printing_Board(board)
     out_of_moves = False
     someone_won = False
 
@@ -105,7 +118,7 @@ while True:
         # Get input
         while True:
             try:
-                move = int(input(f"Player {player}, enter your move (1-9)"))
+                move = int(input(f"{turn_message}: "))
                 if move < 1 or move > 9:
                     raise ValueError
                 if board[move - 1] == " ":
@@ -114,8 +127,13 @@ while True:
                 print("That cell is already occupied. Try again.")
             except ValueError:
                 print("Invalid input. Please enter a number from 1 to 9")
+
         # Update the board
         board[move - 1] = player
+
+        # Redraw the board
+        printing_Board(board)
+
         # Check if the game is over
         if gameover() is not False:
             if x_to_play:
@@ -136,7 +154,7 @@ while True:
 
         # Computer's move
         computer_move()
-        printBoard()
+        printing_Board()
 
         if gameover() is not False:
             if x_to_play:
@@ -154,13 +172,11 @@ while True:
 
     # Ask if the user wants to play again
     if input("Do you want to play again (y/n): \n").lower() == 'n':
-        break
-
-# Exit the Game
-print("Bye!")
+        print("Bye!")
+    else:
+        main(stdscr)
 
 if __name__ == "__main__":
-    name_1 = intro()
-    printBoard()
+    intro()
+    printing_Board()
     curses.wrapper()
-    name()
