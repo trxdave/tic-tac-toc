@@ -50,9 +50,9 @@ def intro():
     Give a message for the player
     """
     print("Welcome to Tic Tac Toe!")
-    print("This is a classic game where two players take turns marking spaces in a 3x3 grid.")
+    print("Classic game where two players take turns marking spaces in a 3x3 grid.")
     print("The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.")
-    print("You will be playing against the computer, which will be represented by 'O'. You will be 'X'.")
+    print("You will be playing against the computer, which will be represented by '😠'. You will be '❌'.")
     print("To make your move, simply enter a number from 1 to 9 corresponding to the position you want to mark on the board, as shown below:")
     print(" 1 | 2 | 3 ")
     print("---+---+---")
@@ -74,16 +74,16 @@ def computer_move():
     # Check if computer can win
     for i in range(3 * 3):
         if board[i] == " ":
-            board[i] = "O"
-            if gameover() == "O":
+            board[i] = "😠"
+            if gameover() == "😠":
                 return
             board[i] = " "
 
     # Check if player can win
     for i in range(3 * 3):
         if board[i] == " ":
-            board[i] = "X"
-            if gameover() == "X":
+            board[i] = "❌"
+            if gameover() == "❌":
                 return
             board[i] = " "
 
@@ -91,40 +91,47 @@ def computer_move():
     while True:
         move = random.randrange(0, 3 * 3, 1)
         if board[move] == " ":
-            board[move] = "O"
+            board[move] = "😠"
             return
 
 def main(stdscr):
     """
     This is the main function of the Tic Tac Toe game.
     """
+    name = intro()
+    player = "❌"
+    computer = "😠"
     x_to_play = True
     board = [" " for i in range(3 * 3)]
-    printing_Board(board)
+    printing_Board(board, player)
     out_of_moves = False
     someone_won = False
 
     while not out_of_moves and not someone_won:
         # Get player's move
         if x_to_play:
-            player = "X"
-            turn_message = "Player X's turn"
-            computer = "O"
+            player = "❌"
+            turn_message = "Player ❌'s turn"
+            computer = "😠"
         else:
-            player = "O"
+            player = "😠"
             turn_message = "Player O's turn"
-            computer = "X"
+            computer = "❌"
 
         # Get input
         while True:
             try:
+                if x_to_play:
                 move = int(input(f"{turn_message}: "))
-                if move < 1 or move > 9:
+            else:
+                # Computer move
+                move = None
+            if move < 1 or move > 9:
                     raise ValueError
                 if board[move - 1] == " ":
                     break
-
-                print("That cell is already occupied. Try again.")
+                elif move:
+                    print("That cell is already occupied. Try again.")
             except ValueError:
                 print("Invalid input. Please enter a number from 1 to 9")
 
@@ -132,10 +139,10 @@ def main(stdscr):
         board[move - 1] = player
 
         # Redraw the board
-        printing_Board(board)
+        printing_Board(board, player)
 
         # Check if the game is over
-        if gameover() is not False:
+        if gameover(board) is not False:
             if x_to_play:
                 print(f"{player} wins!")
             else:
