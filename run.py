@@ -119,21 +119,21 @@ def main(stdscr):
             computer = "❌"
 
         # Get input
-        while True:
-            try:
-                if x_to_play:
-                move = int(input(f"{turn_message}: "))
-            else:
-                # Computer move
-                move = None
-            if move < 1 or move > 9:
-                    raise ValueError
-                if board[move - 1] == " ":
-                    break
-                elif move:
-                    print("That cell is already occupied. Try again.")
-            except ValueError:
-                print("Invalid input. Please enter a number from 1 to 9")
+while True:
+    try:
+        if x_to_play:
+            move = int(input(f"{turn_message} (Enter a number from 1 to 9): "))
+        else:
+            move = None # Handle computer move
+        if move and (move < 1 or move > 9):
+            print("Invalid input. Please enter a number from 1 to 9.")
+            continue
+        if move and board[move - 1] == " ":
+            break
+        elif move:
+            print("That cell is already occupied. Try again.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
 
         # Update the board
         board[move - 1] = player
