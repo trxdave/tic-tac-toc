@@ -2,49 +2,11 @@ import random
 import curses
 import os
 
-def clear():
+def clear_screen():
     """
-    Clean up the function of the mess.
+    Clean up the console.
     """
     os.system("cls" if os.name == "nt" else "clear")
-
-def printing_Board(board, player):
-    """
-    Print the tic-tac-toe board
-    """
-    clear()
-    print(f"You are {player}\n")
-    print("The First Player to get 3 in a row Wins!")
-    print(f'{board[0]} | {board[1]} | {board[2]}')
-    print('---------')
-    print(f'{board[3]} | {board[4]} | {board[5]}')
-    print('---------')
-    print(f'{board[6]} | {board[7]} | {board[8]}')
-
-def gameover(board):
-    """
-    Gameover who is winner
-    """
-    # Check rows
-    for i in range(0, 3 * 3, 3):
-        if board[i] == board[i+1] == board[i+2] != " ":
-            return board[i]
-
-    # Check columns
-    for i in range(3):
-        if board[i] == board[i+3] == board[i+6] != " ":
-            return board[i]
-
-    # Check diagonals
-    if board[0] == board[4] == board[8] != " ":
-        return board[0]
-    if board[2] == board[4] == board[6] != " ":
-        return board[2]
-    # Check if there is no winner
-    if " " not in board:
-        return "draw"
-
-    return False
 
 def intro():
     """
@@ -69,15 +31,54 @@ def intro():
         else:
             print(f"{name} is invalid. Please enter a valid name")
 
+def print_board(board, player):
+    """
+    Print the Tic Tac Toe board.
+    """
+    clear_screen()
+    print(f"You are {player}\n")
+    print("The First Player to get 3 in a row Wins!")
+    print(f'{board[0]} | {board[1]} | {board[2]}')
+    print('---------')
+    print(f'{board[3]} | {board[4]} | {board[5]}')
+    print('---------')
+    print(f'{board[6]} | {board[7]} | {board[8]}')
+
+def check_gameover(board):
+    """
+    Check if the game is over and who the winner is.
+    """
+    # Check rows
+    for i in range(0, 3 * 3, 3):
+        if board[i] == board[i+1] == board[i+2] != " ":
+            return board[i]
+
+    # Check columns
+    for i in range(3):
+        if board[i] == board[i+3] == board[i+6] != " ":
+            return board[i]
+
+    # Check diagonals
+    if board[0] == board[4] == board[8] != " ":
+        return board[0]
+    if board[2] == board[4] == board[6] != " ":
+        return board[2]
+
+    # Check if there is no winner
+    if " " not in board:
+        return "draw"
+
+    return False
+
 def computer_move(board):
     """
-    Computer's move
+    Computer's move.
     """
     # Check if computer can win
     for i in range(3 * 3):
         if board[i] == " ":
             board[i] = "😠"
-            if gameover(board) == "😠":
+            if check_gameover(board) == "😠":
                 return
             board[i] = " "
 
@@ -85,7 +86,7 @@ def computer_move(board):
     for i in range(3 * 3):
         if board[i] == " ":
             board[i] = "❌"
-            if gameover(board) == "❌":
+            if check_gameover(board) == "❌":
                 return
             board[i] = " "
 
@@ -96,79 +97,54 @@ def computer_move(board):
             board[move] = "😠"
             return
 
-def main(stdscr):
+def main():
     """
-    This is the main function of the Tic Tac Toe game.
+    Main game loop.
     """
+    player_name = get_player_name()
+    player = "❌"
+    computer = "😠"
+    x_to_play = True
+    board = [" " for i in range(3 * 3)]
+
     while True:
-        player_score = 0
-        computer_score = 0
-        name = intro()
-        player = "❌"
-        computer = "😠"
-        x_to_play = True
-        board = [" " for i in range(3 * 3)]
-        printing_Board(board, player)
-        out_of_moves = False
-        someone_won = False
-
-        while not out_of_moves and not someone_won:
-            # Get player's move
+        print_welcome_message()
+        while True:
+            print_board(board, player)
             if x_to_play:
-                turn_message = f"{name}'s turn"
-            else:
-                turn_message = "Computer's turn"
-
-            # Get input
-            if x_to_play:
-                while True:
+                valid_input = False
+                while not valid_input:
                     try:
-                        move = int(input(f"{turn_message} (Enter a number from 1 to 9):"))
-                        if move < 1 or move > 9:
-                            print("Invalid input. Please enter a number from 1 to 9.")
-                            continue
-                        if board[move - 1] == " ":
-                            break
+                        move = int(input(f"{player_name}'s turn (Enter a number from 1 to 9): "))
+                        if 1 <= move <= 9:
+                            if board[move - 1] == " ":
+                                valid_input = True
+                                board[move - 1] = player
+                                break
+                            else:
+                                print("That cell is already occupied. Try again.")
                         else:
-                            print("That cell is already occupied. Try again.")
+                            print("Invalid input. Please enter a number from 1 to 9.")
                     except ValueError:
                         print("Invalid input. Please enter a number.")
-
-                # Update the board
-                board[move - 1] = player
             else:
+                print("Computer is thinking...")
                 computer_move(board)
 
-            # Redraw the board
-            printing_Board(board, player)
-
-            # Check if the game is over
-            winner = gameover(board)
-            if winner:
-                if winner == player:
-                    player_score += 1
+            if gameover_status := check_gameover(board):
+                if gameover_status:
+                    print_board(board, player)
                     print(f"{player} wins!")
-                elif winner == "😠":
-                    computer_score += 1
-                    print(f"{computer} wins!")
                 else:
-                    print("Draw")
-                someone_won = True
-                out_of_moves = True
+                    print_board(board, player)
+                    print("Draw!")
+                break
 
-            # Check if there are any moves left
-            if not " " in board:
-                print("Draw!")
-                out_of_moves = True
-
-            # Change turns
             x_to_play = not x_to_play
 
-        print(f"Scoreboard - {name}: {player_score} {computer}: {computer_score}")
-        play_again = input("Do you want to play again? (y/n): ")
-        if play_again.lower() != "y":
-            print("Bye!")
+        play_again = input("Do you want to play again? (y/n): ").lower()
+        if play_again != "y":
             break
 
 if __name__ == "__main__":
-    curses.wrapper(main)
+    main()
