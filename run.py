@@ -101,7 +101,7 @@ def main():
     """
     Main game loop.
     """
-    player_name = get_player_name()
+    player_name = intro ()
     player = "❌"
     computer = "😠"
     x_to_play = True
