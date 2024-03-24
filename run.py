@@ -7,12 +7,6 @@ def clear():
     """
     os.system("cls" if os.name == "nt" else "clear")
 
-
-print("==========")
-print("Welcome to Tic Tac Toe!")
-print("Please enter your name")
-print("==========")
-
 def printBoard():
     """
     Print the tic-tac-toe board
@@ -50,6 +44,19 @@ def gameover():
 
     return False
 
+def intro():
+    """
+    Give a message for the player
+    """
+    print("Welcome to play Tic Tac Toe!")
+    while True:
+    name_1 = input("Please enter your name: ")
+    if name.isalpha():
+        print(f"Hello, {name}!")
+        break
+    else:
+        print(f"{get_name} is invalid. Please enter a valid name")
+
 def computer_move():
     """
     Computer's move
@@ -76,14 +83,6 @@ def computer_move():
         if board[move] == " ":
             board[move] = "O"
             return
-
-while True:
-    name = input('Please enter your name: \n')
-    if name.isalpha():
-        print(f"Hello, {name}!")
-        break
-    else:
-        print(f"{get_name} is invalid. Please enter a valid name")
 
 while True:
     x_to_play = True
@@ -161,5 +160,7 @@ while True:
 print("Bye!")
 
 if __name__ == "__main__":
+    name_1 = intro()
+    printBoard()
     curses.wrapper()
     name()
