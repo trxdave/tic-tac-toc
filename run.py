@@ -24,7 +24,7 @@ def intro():
     print(" 7 | 8 | 9 ")
     print("Get ready to enjoy the game!\n")
     while True:
-        name = input("Please enter your name: ")
+        name = input("Please enter your name: ").strip()
         if name.isalpha():
             print(f"Hello, {name}!")
             return name
@@ -101,50 +101,52 @@ def main():
     """
     Main game loop.
     """
-    player_name = intro ()
-    player = "❌"
-    computer = "😠"
-    x_to_play = True
-    board = [" " for i in range(3 * 3)]
-
     while True:
-        print_welcome_message()
+        clear_screen()
+        player_name = intro()
+        print("Player name:", player_name)
+        player = "❌"
+        computer = "😠"
+        x_to_play = True
+        board = [" " for i in range(3 * 3)]
+
         while True:
-            print_board(board, player)
-            if x_to_play:
-                valid_input = False
-                while not valid_input:
-                    try:
-                        move = int(input(f"{player_name}'s turn (Enter a number from 1 to 9): "))
-                        if 1 <= move <= 9:
-                            if board[move - 1] == " ":
-                                valid_input = True
-                                board[move - 1] = player
-                                break
+            while True:
+                print_board(board, player)
+                if x_to_play:
+                    valid_input = False
+                    while not valid_input:
+                        try:
+                            move = int(input(f"{player_name}'s turn (Enter a number from 1 to 9): "))
+                            if 1 <= move <= 9:
+                                if board[move - 1] == " ":
+                                    valid_input = True
+                                    board[move - 1] = player
+                                    break
+                                else:
+                                    print("That cell is already occupied. Try again.") 
                             else:
-                                print("That cell is already occupied. Try again.")
-                        else:
-                            print("Invalid input. Please enter a number from 1 to 9.")
-                    except ValueError:
-                        print("Invalid input. Please enter a number.")
-            else:
-                print("Computer is thinking...")
-                computer_move(board)
-
-            if gameover_status := check_gameover(board):
-                if gameover_status:
-                    print_board(board, player)
-                    print(f"{player} wins!")
+                                print("Invalid input. Please enter a number from 1 to 9.") 
+                        except ValueError:
+                            print("Invalid input. Please enter a number.")
                 else:
-                    print_board(board, player)
-                    print("Draw!")
+                    print("Computer is thinking...")
+                    computer_move(board)
+
+                if gameover_status := check_gameover(board):
+                    if gameover_status:
+                        print_board(board, player)
+                        print(f"{player} wins!")
+                    else:
+                        print_board(board, player)
+                        print("Draw!")
+                    break
+
+                x_to_play = not x_to_play
+
+            play_again = input("Do you want to play again? (y/n): ").strip().lower()
+            if play_again != "y":
                 break
-
-            x_to_play = not x_to_play
-
-        play_again = input("Do you want to play again? (y/n): ").lower()
-        if play_again != "y":
-            break
 
 if __name__ == "__main__":
     main()
