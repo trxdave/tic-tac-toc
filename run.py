@@ -153,7 +153,11 @@ def main():
 
             play_again = input("Do you want to play again? (y/n): ").strip().lower()
             if play_again != "y":
-                break
+                print("Hope you enjoyed Tic Tac Toe!")
+                return
+            else:
+                board = [" " for i in range(3 * 3)]
+                x_to_play = True
 
 if __name__ == "__main__":
     main()
