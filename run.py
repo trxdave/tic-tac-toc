@@ -13,7 +13,17 @@ def intro():
     """
     Give a message for the player
     """
-    print(Fore.GREEN + "WELCOME TO TIC TAC TOE!")
+    print(Fore.GREEN + "WELCOME TO")
+    print("""
+     ______  ____   __      ______   ____    __      ______   ___     ___
+    |      ||    | /  ]    |      | /    |  /  ]    |      | /   \   /  _]
+    |      | |  | /  /     |      ||  o  | /  /     |      ||     | /  [_
+    |_|  |_| |  |/  /      |_|  |_||     |/  /      |_|  |_||  O  ||    _]
+      |  |   |  /   \_       |  |  |  _  /   \_       |  |  |     ||   [_
+      |  |   |  \     |      |  |  |  |  \     |      |  |  |     ||     |
+      |__|  |____\____|      |__|  |__|__|\____|      |__|   \___/ |_____|
+
+""")
     print(Fore.RESET)
     print(Fore.YELLOW + "Classic game where two players take turns marking spaces in a 3x3 grid.")
     print("The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.")
