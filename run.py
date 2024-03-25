@@ -37,6 +37,7 @@ def print_board(board, player):
     """
     clear_screen()
     print(f"You are {player}\n")
+    print("Current Board:")
     print("The First Player to get 3 in a row Wins!")
     print(f'{board[0]} | {board[1]} | {board[2]}')
     print('---------')
@@ -80,13 +81,16 @@ def computer_move(board):
             board[i] = "😠"
             if check_gameover(board) == "😠":
                 return
+
+            # Reset the move if it doesn't lead to a win
             board[i] = " "
 
-    # Check if player can win
+    # Check if player can win and block them
     for i in range(3 * 3):
         if board[i] == " ":
             board[i] = "❌"
             if check_gameover(board) == "❌":
+                board[i] = "😠"
                 return
             board[i] = " "
 
@@ -134,9 +138,12 @@ def main():
                     computer_move(board)
 
                 if gameover_status := check_gameover(board):
-                    if gameover_status:
+                    if gameover_status == "❌":
                         print_board(board, player)
                         print(f"{player} wins!")
+                    elif gameover_status == "😠":
+                        print_board(board, player)
+                        print(f"{computer} wins")
                     else:
                         print_board(board, player)
                         print("Draw!")
