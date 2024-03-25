@@ -12,6 +12,9 @@ Tic Tac Toe is a game that I created with confidence and proficiency, as my Port
 
 The Python Colorama Package provides the colors used in the game and allows them to be applied to the text in the terminal environment.
 
+https://www.youtube.com/watch?v=u51Zjlnui4Y
+https://pypi.org/project/colorama/
+
 ### Emoji ###
 
 The Tic Tac Toe Emojis package provides emojis for the game and allows them to be applied to text in the terminal.
