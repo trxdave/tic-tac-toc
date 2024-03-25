@@ -1,5 +1,4 @@
 import random
-import curses
 import os
 import colorama
 from colorama import Fore, Back, Style
@@ -15,32 +14,30 @@ def intro():
     Give a message for the player
     """
     print(Fore.GREEN + "WELCOME TO TIC TAC TOE!")
-    print('\033[39m')
+    print(Fore.RESET)
     print(Fore.YELLOW + "Classic game where two players take turns marking spaces in a 3x3 grid.")
     print("The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.")
     print("You will be playing against the computer, which will be represented by '😠'. You will be '❌'.")
     print("To make your move, simply enter a number from 1 to 9 corresponding to the position you want to mark on the board, as shown below:")
-    print('\033[39m')
+    print(Fore.RESET)
     print(Fore.CYAN + " 1 | 2 | 3 ")
     print("---+---+---")
     print(" 4 | 5 | 6 ")
     print("---+---+---")
     print(" 7 | 8 | 9 ")
-    print('\033[39m')
+    print(Fore.RESET)
     print(Fore.RED + "GAME RULES!")
     print("The first player to get three of their marks in a row, column, or diagonal wins the game.")
     print("If all the cells are filled without any player achieving three in a row, the game ends in a draw.")
-    print('\033[39m')
+    print(Fore.RESET)
     print("Get ready to enjoy the game!\n")
     while True:
         name = input(Fore.GREEN + "Please enter your name: ").strip()
         if name.isalpha():
-            print(f"Hello, {name}!")
-            print('\033[39m')
-            return name
-        else:
-            print(Fore.RED + f"{name} is invalid. Please enter a valid name")
-            print('\033[39m')
+            break
+    else:
+        print(Fore.RED + f"{name} is invalid. Please enter a valid name")
+        print(Fore.RESET)
 
 def print_board(board, player):
     """
@@ -50,13 +47,13 @@ def print_board(board, player):
     print(Fore.GREEN + f"You are {player}\n")
     print("Current Board:")
     print("The First Player to get 3 in a row Wins!")
-    print('\033[39m')
+    print(Fore.RESET)
     print(Fore.CYAN + f'{board[0]} | {board[1]} | {board[2]}')
     print('---------')
     print(f'{board[3]} | {board[4]} | {board[5]}')
     print('---------')
     print(f'{board[6]} | {board[7]} | {board[8]}')
-    print('\033[39m')
+    print(Fore.RESET)
 
 def check_gameover(board):
     """
@@ -141,12 +138,12 @@ def main():
                                     board[move - 1] = player
                                     break
                                 else:
-                                    print(Fore.RED + "That cell is already occupied. Try again.") 
+                                    print(Fore.RED + "That cell is already occupied. Try again.")
                             else:
-                                print("Invalid input. Please enter a number from 1 to 9.") 
+                                print("Invalid input. Please enter a number from 1 to 9.")
                         except ValueError:
                             print("Invalid input. Please enter a number.")
-                            print('\033[39m')
+                            print(Fore.RESET)
                 else:
                     print("Computer is thinking...")
                     computer_move(board)
@@ -158,7 +155,7 @@ def main():
                     elif gameover_status == "😠":
                         print_board(board, player)
                         print(f"{computer} wins")
-                        print('\003[39m')
+                        print(Fore.RESET)
                     else:
                         print_board(board, player)
                         print(Fore.YELLOW + "Draw!")
@@ -169,7 +166,7 @@ def main():
             play_again = input("Do you want to play again? (y/n): ").strip().lower()
             if play_again != "y":
                 print("Hope you enjoyed Tic Tac Toe!")
-                print('\003[39m')
+                print(Fore.RESET)
                 return
             else:
                 board = [" " for i in range(3 * 3)]
