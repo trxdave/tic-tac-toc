@@ -36,11 +36,25 @@ https://emojidb.org/tic-tac-toe-emojis
 
 ## Flowchart ##
 
- The Tic-Tac-Toe game begins by asking the player to choose between X or O, after which both the player and computer take turns making moves. 
-
 ![alt text](documents/flowchart/chart.png)
 
-The flowcharts on the left demonstrate the series of events that occur during the player's turn, while the ones on the right represent what takes place during the computer's turn. Once the player or computer has made a move, the program checks whether they have won or caused a tie, and then switches turns. 
-After the game is complete, the program prompts the player to decide whether they would like to play again.
+Start: The program starts here.
+Initialize Game: Necessary variables are initialized, such as the game board, player markers, and screen-clearing function.
+Display Introduction: The game introduces itself and provides instructions to the player.
+Get Player Name: Prompt the player to enter their name.
+Game Loop Begins: Enter the main game loop.
+Display Board: Show the current state of the game board.
+Player Turn: Prompt the current player to make a move.
+Check Validity of Move: Ensure the move is valid (i.e., the selected cell is empty).
+Update Board: If the move is valid, update the board with the player's marker.
+Check for Win/Draw: Check if the game has been won or if it's a draw.
+If a win or draw is detected, proceed to the appropriate end game state.
+Switch Players: Switch to the next player's turn.
+End Game States:
+Win: Display the winning player and ask if they want to play again.
+Draw: Notify the players that the game ended in a draw and ask if they want to play again.
+Play Again?:
+If the players choose to play again, reset the game and return to the start of the game loop.
+If the players choose not to play again, end the program.
 
 https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30
