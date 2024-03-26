@@ -2,7 +2,15 @@
 
 ## Introduction ##
 
-Tic Tac Toe is a game that I created with confidence and proficiency, as my Portfolio Project 3. It is built using pure Python and an extensive collection of libraries to elevate its functionality. The game can be enjoyed in the Code Institute mock terminal on Heroku with seamless ease. The main goal of the game is to strategically place three marks in a horizontal, vertical, or diagonal row to triumph and emerge victorious.
+Are you ready to engage in a classic battle of wits against the computer? Tic Tac Toe is a timeless game where two players take turns marking spaces in a 3x3 grid, aiming to be the first to align three of their marks horizontally, vertically, or diagonally.
+
+In this digital rendition of the game, you'll be facing off against an AI opponent represented by '😠', while you'll be '❌'. The rules are simple: strategically place your mark in an empty cell by entering a number from 1 to 9, corresponding to the position on the board.
+
+Here's a quick overview of the game rules:
+
+The first player to get three of their marks in a row, column, or diagonal wins.
+If all the cells are filled without any player achieving three in a row, the game ends in a draw.
+Get ready to exercise your tactical prowess and enjoy the thrill of victory in this classic game of Tic Tac Toe!
 
 ## Live Project ##
 
@@ -10,7 +18,13 @@ Tic Tac Toe is a game that I created with confidence and proficiency, as my Port
 
 ### Colours ###
 
-The Python Colorama Package provides the colors used in the game and allows them to be applied to the text in the terminal environment.
+Green: Used for the welcome message and player prompts.
+Yellow: Used for game instructions and important information about the game.
+Cyan: Used for displaying the Tic Tac Toe board and numerical grid positions.
+Red: Used for error messages or warnings.
+Reset: Used to reset the color back to default after displaying colored text.
+
+These colors are implemented using the Colorama library in Python, which allows for easy cross-platform colored text output in the console. You can customize the colors or add more as per your preference by modifying the code.
 
 https://www.youtube.com/watch?v=u51Zjlnui4Y
 https://pypi.org/project/colorama/
@@ -19,6 +33,7 @@ https://pypi.org/project/colorama/
 
 The Tic Tac Toe Emojis package provides emojis for the game and allows them to be applied to text in the terminal.
 https://emojidb.org/tic-tac-toe-emojis
+
 ## Flowchart ##
 
  The Tic-Tac-Toe game begins by asking the player to choose between X or O, after which both the player and computer take turns making moves. 

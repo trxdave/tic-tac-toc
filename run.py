@@ -158,8 +158,9 @@ def main():
                     valid_input = False
                     while not valid_input:
                         try:
-                            move = int(input(f"{player_name}'s turn"
-                            "(Enter a number from 1 to 9): "))
+                            move = int(input(
+                             f"{player_name}'s turn (Enter a number from 1-9):"
+                            ))
                             if 1 <= move <= 9:
                                 if board[move - 1] == " ":
                                     valid_input = True
@@ -217,5 +218,5 @@ def main():
                 board = [" " for i in range(3 * 3)]
                 x_to_play = True
 
-if __name__ == "__main__":
-    main()
+    if __name__ == "__main__":
+        main()
