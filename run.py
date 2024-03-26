@@ -1,13 +1,17 @@
 import random
 import os
 import colorama
-from colorama import Fore, Back, Style
+from colorama import Fore
+
+colorama.init()
+
 
 def clear_screen():
     """
-    Clean up the console.
+    Clean up the mess
     """
     os.system("cls" if os.name == "nt" else "clear")
+
 
 def intro():
     """
@@ -15,20 +19,24 @@ def intro():
     """
     print(Fore.GREEN + "WELCOME TO")
     print("""
-     ______  ____   __      ______   ____    __      ______   ___     ___
-    |      ||    | /  ]    |      | /    |  /  ]    |      | /   \   /  _]
-    |      | |  | /  /     |      ||  o  | /  /     |      ||     | /  [_
-    |_|  |_| |  |/  /      |_|  |_||     |/  /      |_|  |_||  O  ||    _]
-      |  |   |  /   \_       |  |  |  _  /   \_       |  |  |     ||   [_
-      |  |   |  \     |      |  |  |  |  \     |      |  |  |     ||     |
-      |__|  |____\____|      |__|  |__|__|\____|      |__|   \___/ |_____|
-
+ _____ _      _____          _____         
+|_   _(_)__  |_   _|_ _ __  |_   _|__  ___ 
+  | | | / _|   | |/ _` / _|   | |/ _ \/ -_)
+  |_| |_\__|   |_|\__,_\__|   |_|\___/\___|
 """)
     print(Fore.RESET)
-    print(Fore.YELLOW + "Classic game where two players take turns marking spaces in a 3x3 grid.")
-    print("The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.")
-    print("You will be playing against the computer, which will be represented by '😠'. You will be '❌'.")
-    print("To make your move, simply enter a number from 1 to 9 corresponding to the position you want to mark on the board, as shown below:")
+    print(
+        Fore.YELLOW + "Classic game where two players take turns marking"
+        "spaces in a 3x3 grid.\n"
+        "The player who succeeds in placing three of their marks in a"
+        "horizontal, vertical, or diagonal row wins the game.\n"
+        "You will be playing against the computer, which will be represented "
+        "by '😠'. You will be '❌'.\n"
+        "To make your move, simply enter a number from 1 to 9 corresponding "
+        "to the position "
+        "you want to mark on the board, as shown below:"
+    )
+
     print(Fore.RESET)
     print(Fore.CYAN + " 1 | 2 | 3 ")
     print("---+---+---")
@@ -37,8 +45,12 @@ def intro():
     print(" 7 | 8 | 9 ")
     print(Fore.RESET)
     print(Fore.RED + "GAME RULES!")
-    print("The first player to get three of their marks in a row, column, or diagonal wins the game.")
-    print("If all the cells are filled without any player achieving three in a row, the game ends in a draw.")
+    print(
+        "The first player to get three of their marks in a row, column, or diagonal wins the game."
+    )
+    print(
+        "If all the cells are filled without any player achieving three in a row, the game ends in a draw."
+    )
     print(Fore.RESET)
     print("Get ready to enjoy the game!\n")
     while True:
@@ -48,6 +60,7 @@ def intro():
     else:
         print(Fore.RED + f"{name} is invalid. Please enter a valid name")
         print(Fore.RESET)
+
 
 def print_board(board, player):
     """
@@ -64,6 +77,7 @@ def print_board(board, player):
     print('---------')
     print(f'{board[6]} | {board[7]} | {board[8]}')
     print(Fore.RESET)
+
 
 def check_gameover(board):
     """
@@ -90,6 +104,7 @@ def check_gameover(board):
         return "draw"
 
     return False
+
 
 def computer_move(board):
     """
@@ -121,6 +136,7 @@ def computer_move(board):
             board[move] = "😠"
             return
 
+
 def main():
     """
     Main game loop.
@@ -148,9 +164,14 @@ def main():
                                     board[move - 1] = player
                                     break
                                 else:
-                                    print(Fore.RED + "That cell is already occupied. Try again.")
+                                    print(
+                                        Fore.RED + "That cell is already occupied. "
+                                        "Try again."
+                                    )
                             else:
-                                print("Invalid input. Please enter a number from 1 to 9.")
+                                print(
+                                    "Invalid input. Please enter a number from 1 to 9."
+                                )
                         except ValueError:
                             print("Invalid input. Please enter a number.")
                             print(Fore.RESET)
@@ -175,7 +196,16 @@ def main():
 
             play_again = input("Do you want to play again? (y/n): ").strip().lower()
             if play_again != "y":
-                print("Hope you enjoyed Tic Tac Toe!")
+                print("""
+ _  _                                           _                 _ 
+| || |___ _ __  ___   _  _ ___ _  _   ___ _ _  (_)___ _  _ ___ __| |
+| __ / _ \ '_ \/ -_) | || / _ \ || | / -_) ' \ | / _ \ || / -_) _` |
+|_||_\___/ .__/\___|  \_, \___/\_,_| \___|_||_|/ \___/\_, \___\__,_|
+ _____ _ |_|  _____   |__/   _____         _ |__/     |__/          
+|_   _(_)__  |_   _|_ _ __  |_   _|__  ___| |                       
+  | | | / _|   | |/ _` / _|   | |/ _ \/ -_)_|                       
+  |_| |_\__|   |_|\__,_\__|   |_|\___/\___(_)                       
+""")
                 print(Fore.RESET)
                 return
             else:
@@ -184,4 +214,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    colorama.init()
