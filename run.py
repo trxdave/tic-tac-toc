@@ -26,15 +26,14 @@ def intro():
 """)
     print(Fore.RESET)
     print(
-        Fore.YELLOW + "Classic game where two players take turns marking"
+        Fore.YELLOW + "Classic game where two players take turns marking "
         "spaces in a 3x3 grid.\n"
-        "The player who succeeds in placing three of their marks in a"
+        "The player who succeeds in placing three of their marks in a "
         "horizontal, vertical, or diagonal row wins the game.\n"
         "You will be playing against the computer, which will be represented "
         "by '😠'. You will be '❌'.\n"
         "To make your move, simply enter a number from 1 to 9 corresponding "
-        "to the position "
-        "you want to mark on the board, as shown below:"
+        "to the position you want to mark on the board, as shown below:"
     )
 
     print(Fore.RESET)
@@ -46,20 +45,22 @@ def intro():
     print(Fore.RESET)
     print(Fore.RED + "GAME RULES!")
     print(
-        "The first player to get three of their marks in a row, column, or diagonal wins the game."
+        "The first player to get three of their marks in a row, column, or"
+        "diagonal wins the game."
     )
     print(
-        "If all the cells are filled without any player achieving three in a row, the game ends in a draw."
+        "If all the cells are filled without any player achieving three in a"
+        "row, the game ends in a draw."
     )
     print(Fore.RESET)
     print("Get ready to enjoy the game!\n")
     while True:
         name = input(Fore.GREEN + "Please enter your name: ").strip()
         if name.isalpha():
-            break
-    else:
-        print(Fore.RED + f"{name} is invalid. Please enter a valid name")
-        print(Fore.RESET)
+            return name
+        else:
+            print(Fore.RED + f"{name} is invalid. Please enter a valid name")
+            print(Fore.RESET)
 
 
 def print_board(board, player):
@@ -157,7 +158,8 @@ def main():
                     valid_input = False
                     while not valid_input:
                         try:
-                            move = int(input(f"{player_name}'s turn (Enter a number from 1 to 9): "))
+                            move = int(input(f"{player_name}'s turn"
+                            "(Enter a number from 1 to 9): "))
                             if 1 <= move <= 9:
                                 if board[move - 1] == " ":
                                     valid_input = True
@@ -165,12 +167,13 @@ def main():
                                     break
                                 else:
                                     print(
-                                        Fore.RED + "That cell is already occupied. "
-                                        "Try again."
+                                        Fore.RED + "That cell is already"
+                                        "occupied. Try again."
                                     )
                             else:
                                 print(
-                                    "Invalid input. Please enter a number from 1 to 9."
+                                    "Invalid input. Please enter a number from"
+                                    "1 to 9."
                                 )
                         except ValueError:
                             print("Invalid input. Please enter a number.")
@@ -194,7 +197,9 @@ def main():
 
                 x_to_play = not x_to_play
 
-            play_again = input("Do you want to play again? (y/n): ").strip().lower()
+            play_again = input("Do you want to play again? (y/n): ") \
+                .strip() \
+                .lower()
             if play_again != "y":
                 print("""
  _  _                                           _                 _ 
