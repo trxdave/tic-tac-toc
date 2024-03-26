@@ -2,15 +2,16 @@
 
 ## Introduction ##
 
-Are you ready to engage in a classic battle of wits against the computer? Tic Tac Toe is a timeless game where two players take turns marking spaces in a 3x3 grid, aiming to be the first to align three of their marks horizontally, vertically, or diagonally.
+Are you up for a game of Tic Tac Toe against a computer? It's a timeless game where two players take turns marking spaces in a 3x3 grid. The objective is to be the first to align three of your marks horizontally, vertically, or diagonally.
 
-In this digital rendition of the game, you'll be facing off against an AI opponent represented by '😠', while you'll be '❌'. The rules are simple: strategically place your mark in an empty cell by entering a number from 1 to 9, corresponding to the position on the board.
+In this digital version of the game, you'll be playing against an AI opponent represented by '😠', while you'll be '❌'. To play, you just need to strategically place your mark in an empty cell by entering a number from 1 to 9, corresponding to the position on the board.
 
-Here's a quick overview of the game rules:
+Here are the game rules:
 
-The first player to get three of their marks in a row, column, or diagonal wins.
-If all the cells are filled without any player achieving three in a row, the game ends in a draw.
-Get ready to exercise your tactical prowess and enjoy the thrill of victory in this classic game of Tic Tac Toe!
+- The first player to get three of their marks in a row, column, or diagonal wins.
+- If all the cells are filled without any player achieving three in a row, the game ends in a draw.
+
+Get ready to exercise your tactical skills and experience the thrill of victory in this classic game of Tic Tac Toe!
 
 ## Live Project ##
 
