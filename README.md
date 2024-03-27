@@ -29,8 +29,8 @@ Get ready to exercise your tactical skills and experience the thrill of victory 
 
 These colors are implemented using the Colorama library in Python, which allows for easy cross-platform colored text output in the console. You can customize the colors or add more as per your preference by modifying the code.
 
-[How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
-[colorma 0.4.6](https://pypi.org/project/colorama/)
+- [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
+- [colorma 0.4.6](https://pypi.org/project/colorama/)
 
 ### Emoji ###
 
@@ -104,3 +104,8 @@ https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-ga
 
 - The colorama library is used for coloring the console output, enhancing the visual appeal of the game.
 - Different colors are used for headers, prompts, and game status messages, making them more distinguishable and engaging.
+
+# Built with #
+
+* Python
+* Heroku
