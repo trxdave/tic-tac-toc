@@ -18,7 +18,7 @@ def intro():
     Give a message for the player
     """
     print(Fore.GREEN + "WELCOME TO")
-    print("""
+    print(r"""
  _____ _      _____          _____         
 |_   _(_)__  |_   _|_ _ __  |_   _|__  ___ 
   | | | / _|   | |/ _` / _|   | |/ _ \/ -_)
@@ -202,7 +202,7 @@ def main():
                 .strip() \
                 .lower()
             if play_again != "y":
-                print("""
+                print(r"""
  _  _                                           _                 _ 
 | || |___ _ __  ___   _  _ ___ _  _   ___ _ _  (_)___ _  _ ___ __| |
 | __ / _ \ '_ \/ -_) | || / _ \ || | / -_) ' \ | / _ \ || / -_) _` |
