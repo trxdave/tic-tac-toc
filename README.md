@@ -64,3 +64,43 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 
 https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30
+
+## Features ##
+
+### Welcome Message and Introduction: ###
+
+- Upon starting the game, the player is greeted with a stylish header and a brief introduction to the game's rules and mechanics.
+- The system asks the user to provide their name and ensures that only alphabetic characters are accepted.
+
+### Printing the Game Board: ###
+
+- The 'print_board()' function displays the current state of the Tic Tac Toe game board to the player.
+- It shows the positions on the board with numbers for player reference.
+
+### Game Logic: ###
+
+- The function checks the board state to determine the winner or if it's a draw and if the game is over. 
+- It checks for winning conditions in rows, columns, and diagonals, as well as for a draw condition.
+
+### Computer Move: ###
+
+- This function is responsible for executing the logic that determines the computer player's move.
+- After checking if the computer can win on its next move, if not, it blocks the player from winning, and if neither, it makes a random move.
+
+### Main Game Loop ###
+
+- The main() function is responsible for managing the game's flow.
+- It prompts the player for their name, displays the introduction, and begins a new game repeatedly.
+- Each game consists of alternating, player and computer turns until a win or draw.
+- At the end of every game, the system prompts the player to ask if they would like to play again.
+
+### Input Validation: ###
+
+- It ensures that the player's input for their name and moves are valid.
+- Name input only accepts alphabetic characters.
+- Move input only accepts integers from 1 to 9 and checks if the chosen position is empty.
+
+### Styling with Colorama: ###
+
+- The colorama library is used for coloring the console output, enhancing the visual appeal of the game.
+- Different colors are used for headers, prompts, and game status messages, making them more distinguishable and engaging.
