@@ -105,7 +105,24 @@ https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-ga
 - The colorama library is used for coloring the console output, enhancing the visual appeal of the game.
 - Different colors are used for headers, prompts, and game status messages, making them more distinguishable and engaging.
 
-# Built with #
+# Technologies Used #
 
-* Python
-* Heroku
+## Languages Used ##
+
+* [Python](https://www.python.org/)
+
+## Frameworks - Libraries - Programs Used ##
+
+* GitHub as software hosting platform that enables users to store their projects in a remote location. This allows for easy access and collaboration on the project from different locations. [GitHub](https://www.github.com/)
+* GitPod as developer hosting platform. [GitPod](https://www.gitpod.com)
+* Heroku is a cloud platform as a service (PaaS) that allows developers to build, deploy, manage, and scale applications effortlessly. It provides a platform for hosting web applications, databases, and other software services, removing the need for developers to manage underlying infrastructure. [Heroku](https://id.heroku.com/login)
+* A CI (Continuous Integration) Python linter is a tool used in the context of Continuous Integration pipelines to check Python code for adherence to coding standards, best practices, and potential errors or style issues. [CI Python Linter](https://pep8ci.herokuapp.com/)
+* [patorjk](https://patorjk.com/software/taag/#p=testall&f=Impossible&t=Tic%20tac%20toe)
+* Lucidchart is a web-based diagramming tool used for creating flowcharts, mind maps, organizational charts, network diagrams, and other types of visual representations. 
+ [LucidChart](https://www.lucidchart.com/pages/)
+* In the context of Tic Tac Toe, emojis can be used to represent the players' moves on the game board instead of traditional X's and O's. Emojis add a fun and visually appealing element to the game, making it more engaging for players. [Emoji](https://emojidb.org/tic-tac-toe-emojis)
+* It helps users improve the quality and correctness of their written communication by identifying grammatical errors, spelling mistakes, punctuation issues, and style inconsistencies in their text. [Grammarly](https://www.grammarly.com/)
+
+# Validator Testing #
+
+## CI Python Linter ##
