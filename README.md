@@ -61,10 +61,6 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - If the players choose to play again, reset the game and return to the start of the game loop.
 - If the players choose not to play again, end the program.
 
-
-
-https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30
-
 ## Features ##
 
 ### Welcome Message and Introduction: ###
@@ -122,6 +118,7 @@ https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-ga
  [LucidChart](https://www.lucidchart.com/pages/)
 * In the context of Tic Tac Toe, emojis can be used to represent the players' moves on the game board instead of traditional X's and O's. Emojis add a fun and visually appealing element to the game, making it more engaging for players. [Emoji](https://emojidb.org/tic-tac-toe-emojis)
 * It helps users improve the quality and correctness of their written communication by identifying grammatical errors, spelling mistakes, punctuation issues, and style inconsistencies in their text. [Grammarly](https://www.grammarly.com/)
+* Start read the instructions on how to use Tic Tac Toe [Start read Tic Tac Toe](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
 
 # Validator Testing #
 
