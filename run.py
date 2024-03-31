@@ -4,6 +4,7 @@ Tic Tac Toe Game
 This module implements a simple Tic Tac Toe game where a player competes
 against the computer.
 """
+
 import random
 import os
 import colorama
