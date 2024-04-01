@@ -113,7 +113,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 * GitPod as developer hosting platform. [GitPod](https://www.gitpod.com)
 * Heroku is a cloud platform as a service (PaaS) that allows developers to build, deploy, manage, and scale applications effortlessly. It provides a platform for hosting web applications, databases, and other software services, removing the need for developers to manage underlying infrastructure. [Heroku](https://id.heroku.com/login)
 * A CI (Continuous Integration) Python linter is a tool used in the context of Continuous Integration pipelines to check Python code for adherence to coding standards, best practices, and potential errors or style issues. [CI Python Linter](https://pep8ci.herokuapp.com/)
-* [patorjk](https://patorjk.com/software/taag/#p=testall&f=Impossible&t=Tic%20tac%20toe)
+* Logo fonts Tic Tac Toe and Hope you enjoyed Tic Tac Toe. [patorjk](https://patorjk.com/software/taag/#p=testall&f=Impossible&t=Tic%20tac%20toe)
 * Lucidchart is a web-based diagramming tool used for creating flowcharts, mind maps, organizational charts, network diagrams, and other types of visual representations. 
  [LucidChart](https://www.lucidchart.com/pages/)
 * In the context of Tic Tac Toe, emojis can be used to represent the players' moves on the game board instead of traditional X's and O's. Emojis add a fun and visually appealing element to the game, making it more engaging for players. [Emoji](https://emojidb.org/tic-tac-toe-emojis)
@@ -123,3 +123,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 # Validator Testing #
 
 ## CI Python Linter ##
+
+* I used CI Python Linter (https://pep8ci.herokuapp.com) to remove all errors from the code. The code is now error-free and optimized for performance.
+
+![alt text](<documents/testing/CI Python Linter.png>)
