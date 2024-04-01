@@ -225,5 +225,6 @@ def main():
                 board = [" " for i in range(3 * 3)]
                 x_to_play = True
 
-    if __name__ == "__main__":
-        main()
+
+if __name__ == "__main__":
+    main()
