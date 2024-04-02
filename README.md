@@ -15,7 +15,7 @@ Get ready to exercise your tactical skills and experience the thrill of victory 
 
 ## Live Project ##
 
-[View Live Project Here]()
+[View Live Project Here](https://tic-tac-toc-5757397cee14.herokuapp.com/)
 
 ## Design ##
 
@@ -84,13 +84,17 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ### Welcome Message and Introduction: ###
 
-- Upon starting the game, the player is greeted with a stylish header and a brief introduction to the game's rules and mechanics.
-- The system asks the user to provide their name and ensures that only alphabetic characters are accepted.
+- At the game's start, a stylish header appears along with a brief introduction to the rules and mechanics.
+- The system prompts the user to choose between two options: Press 1 to start the game or Press 2 to view the game rules. The system also requests the user's name, ensuring that only alphabetic characters are accepted.
+
+![alt text](documents/images/welcome.png)
 
 ### Printing the Game Board: ###
 
 - The 'print_board()' function displays the current state of the Tic Tac Toe game board to the player.
 - It shows the positions on the board with numbers for player reference.
+
+![alt text](documents/images/print-board.png)
 
 ### Game Logic: ###
 
@@ -132,7 +136,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
 
     * Install Colorama using this terminal command:
-    ![alt text](<documents/images/install colorama.png>)
+    ![alt text](<documents/images/install-colorama.png>)
 
 ## Frameworks - Libraries - Programs Used ##
 
@@ -153,4 +157,4 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 * I used CI Python Linter (https://pep8ci.herokuapp.com) to remove all errors from the code. The code is now error-free and optimized for performance.
 
-![alt text](<documents/testing/CI Python Linter.png>)
+![alt text](<documents/testing/ci-python-linter.png>)
