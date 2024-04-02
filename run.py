@@ -53,14 +53,16 @@ def intro():
 
     print("Get ready to enjoy the game!\n")
     while True:
-        choice = input("Press 1 to start the game or Press 2 to view game rules: ").strip()
+        choice = input("Press 1 to start the game "
+                       "or Press 2 to view game rules: ").strip()
 
         if choice == "1":
             name = input(Fore.GREEN + "Please enter your name: ").strip()
             if name.isalpha():
                 return name
             else:
-                print(Fore.RED + f"{name} is Invalid choice. Please enter a valid name")
+                print(Fore.RED + f"{name} is Invalid choice. "
+                                 "Please enter a valid name")
                 print(Fore.RESET)
         elif choice == "2":
             print_game_rules()
@@ -165,13 +167,15 @@ def player_move(board, player, player_name):
     valid_input = False
     while not valid_input:
         try:
-            move = int(input(f"{player_name}'s turn (Enter a number from 1-9):"))
+            move = int(input(f"{player_name}'s turn "
+                             "(Enter a number from 1-9):"))
             if 1 <= move <= 9:
                 if board[move - 1] == " ":
                     valid_input = True
                     board[move - 1] = player
                 else:
-                    print(Fore.RED + "That cell is already occupied. Try again")
+                    print(Fore.RED + "That cell is already occupied. "
+                                     "Try again")
             else:
                 print("Invalid input. Please enter a number from 1 to 9.")
         except ValueError:
@@ -196,6 +200,9 @@ def print_game_result(gameover_status, player, board):
 
 
 def play_again():
+    """
+    Player's choice, either y for yes or n for no.
+    """
     while True:
         choice = input("Do you want to play again? (y/n): ").strip().lower()
         if choice in {"y", "n"}:
@@ -203,17 +210,6 @@ def play_again():
         else:
             print(Fore.RED + "Invalid choice. Please enter y or n.")
             print(Fore.RESET)
-            print(Fore.GREEN + r"""
- _  _                                           _                 _
-| || |___ _ __  ___   _  _ ___ _  _   ___ _ _  |_|___ _  _ ___ __| |
-| __ / _ \ '_ \/ -_\ | || / _ \ || | / -_\ ' \ | / _ \ || / -_\ _` |
-|_||_\___/ .__/\___|  \_, \___/\_,_| \___|_||_|/ \___/\_, \___\__,_|
- _____ _ |_|  _____   |__/   _____         _ |__/     |__/
-|_   _|_|__  |_   _|_ _ __  |_   _|__  ___| |
-  | | | / _|   | |/ _` / _|   | |/ _ \/ -_\_|
-  |_| |_\__|   |_|\__,_\__|   |_|\___/\___|_|
-""")
-    print(Fore.RESET)
 
 
 def play_game(player_name):
@@ -222,7 +218,6 @@ def play_game(player_name):
     """
     while True:
         player = "❌"
-        computer = "😠"
         x_to_play = True
         board = [" " for _ in range(3 * 3)]
 
@@ -242,6 +237,17 @@ def play_game(player_name):
                 x_to_play = not x_to_play
 
             if not play_again() == "y":
+                print(Fore.GREEN + r"""
+ _  _                                           _                 _
+| || |___ _ __  ___   _  _ ___ _  _   ___ _ _  |_|___ _  _ ___ __| |
+| __ / _ \ '_ \/ -_\ | || / _ \ || | / -_\ ' \ | / _ \ || / -_\ _` |
+|_||_\___/ .__/\___|  \_, \___/\_,_| \___|_||_|/ \___/\_, \___\__,_|
+ _____ _ |_|  _____   |__/   _____         _ |__/     |__/
+|_   _|_|__  |_   _|_ _ __  |_   _|__  ___| |
+  | | | / _|   | |/ _` / _|   | |/ _ \/ -_\_|
+  |_| |_\__|   |_|\__,_\__|   |_|\___/\___|_|
+""")
+                print(Fore.RESET)
                 return
             else:
                 board = [" " for _ in range(3 * 3)]
@@ -249,6 +255,11 @@ def play_game(player_name):
 
 
 def main():
+    """
+    Entry point for the Tic Tac Toe game.
+    Function initializes the game, the player to enter their name,
+    and starts the game loop.
+    """
     clear_screen()
     player_name = intro()
     play_game(player_name)
