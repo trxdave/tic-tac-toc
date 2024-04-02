@@ -179,7 +179,46 @@ def player_move(board, player, player_name):
             print(Fore.RESET)
 
 
-def main():
+def print_game_result(gameover_status, player):
+    """
+    Print the game result.
+    """
+    if gameover_status == player:
+        print_board(board, player)
+        print(Fore.GREEN + f"{player} wins!")
+    elif gameover_status == "😠":
+        print_board(board, player)
+        print(f"{computer} wins!")
+        print(Fore.RESET)
+    else:
+        print_board(board, player)
+        print(Fore.YELLOW + "Draw!")
+
+
+def play_again():
+
+    play_again = input("Do you want to play again? (y/n): ")
+        .strip() \
+        .lower()
+            if play_again != "y":                
+    print(r"""
+ _  _                                           _                 _
+| || |___ _ __  ___   _  _ ___ _  _   ___ _ _  |_|___ _  _ ___ __| |
+| __ / _ \ '_ \/ -_\ | || / _ \ || | / -_\ ' \ | / _ \ || / -_\ _` |
+|_||_\___/ .__/\___|  \_, \___/\_,_| \___|_||_|/ \___/\_, \___\__,_|
+ _____ _ |_|  _____   |__/   _____         _ |__/     |__/
+|_   _|_|__  |_   _|_ _ __  |_   _|__  ___| |
+  | | | / _|   | |/ _` / _|   | |/ _ \/ -_\_|
+  |_| |_\__|   |_|\__,_\__|   |_|\___/\___|_|
+""")
+    print(Fore.RESET)
+        return
+                else:
+                    board = [" " for i in range(3 * 3)]
+                    x_to_play = True
+
+
+def play_game(player_name):
     """
     Main game loop.
     """
@@ -196,69 +235,29 @@ def main():
             while True:
                 print_board(board, player)
                 if x_to_play:
-                    valid_input = False
-                    while not valid_input:
-                        try:
-                            move = int(input(
-                             f"{player_name}'s turn (Enter a number from 1-9):"
-                            ))
-                            if 1 <= move <= 9:
-                                if board[move - 1] == " ":
-                                    valid_input = True
-                                    board[move - 1] = player
-                                    break
-                                else:
-                                    print(
-                                        Fore.RED + "That cell is already"
-                                        "occupied. Try again."
-                                    )
-                            else:
-                                print(
-                                    "Invalid input. Please enter a number from"
-                                    "1 to 9."
-                                )
-                        except ValueError:
-                            print("Invalid input. Please enter a number.")
-                            print(Fore.RESET)
+                    player_move(board, player, player_name)
                 else:
                     print("Computer is thinking...")
                     computer_move(board)
 
                 if gameover_status := check_gameover(board):
-                    if gameover_status == "❌":
-                        print_board(board, player)
-                        print(Fore.GREEN + f"{player} wins!")
-                    elif gameover_status == "😠":
-                        print_board(board, player)
-                        print(f"{computer} wins")
-                        print(Fore.RESET)
-                    else:
-                        print_board(board, player)
-                        print(Fore.YELLOW + "Draw!")
+                    print_game_result(gameover_status, player)
                     break
 
                 x_to_play = not x_to_play
 
-            play_again = input("Do you want to play again? (y/n): ") \
-                .strip() \
-                .lower()
-            if play_again != "y":
-                print(r"""
- _  _                                           _                 _
-| || |___ _ __  ___   _  _ ___ _  _   ___ _ _  |_|___ _  _ ___ __| |
-| __ / _ \ '_ \/ -_\ | || / _ \ || | / -_\ ' \ | / _ \ || / -_\ _` |
-|_||_\___/ .__/\___|  \_, \___/\_,_| \___|_||_|/ \___/\_, \___\__,_|
- _____ _ |_|  _____   |__/   _____         _ |__/     |__/
-|_   _|_|__  |_   _|_ _ __  |_   _|__  ___| |
-  | | | / _|   | |/ _` / _|   | |/ _ \/ -_\_|
-  |_| |_\__|   |_|\__,_\__|   |_|\___/\___|_|
-""")
-                print(Fore.RESET)
+            if not play_again():
                 return
-            else:
+            else:                
                 board = [" " for i in range(3 * 3)]
                 x_to_play = True
 
+
+def main():
+    clear_screen()
+    player_name = intro()
+    print("Player name:", player_name)
+    play_game(player_name)
 
 if __name__ == "__main__":
     main()
