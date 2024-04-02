@@ -62,6 +62,15 @@ def intro():
     print(Fore.RESET)
     print("Get ready to enjoy the game!\n")
     while True:
+        choice = input("Press 1 to start the game or Press 2 to view game rules: ").strip()
+        if choice == "1":
+            return True
+        elif choice == "2":
+            print_game_rules()
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    
         name = input(Fore.GREEN + "Please enter your name: ").strip()
         if name.isalpha():
             return name
