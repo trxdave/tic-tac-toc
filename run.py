@@ -50,11 +50,11 @@ def intro():
     print("---+---+---")
     print(" 7 | 8 | 9 ")
     print(Fore.RESET)
-    
-    print(Fore.RESET)
+
     print("Get ready to enjoy the game!\n")
     while True:
         choice = input("Press 1 to start the game or Press 2 to view game rules: ").strip()
+
         if choice == "1":
             name = input(Fore.GREEN + "Please enter your name: ").strip()
             if name.isalpha():
@@ -171,7 +171,7 @@ def player_move(board, player, player_name):
                     valid_input = True
                     board[move - 1] = player
                 else:
-                    print(Fore.RED + "That cell is already occupied. Try again.")
+                    print(Fore.RED + "That cell is already occupied. Try again")
             else:
                 print("Invalid input. Please enter a number from 1 to 9.")
         except ValueError:
@@ -179,7 +179,7 @@ def player_move(board, player, player_name):
             print(Fore.RESET)
 
 
-def print_game_result(gameover_status, player):
+def print_game_result(gameover_status, player, board):
     """
     Print the game result.
     """
@@ -188,7 +188,7 @@ def print_game_result(gameover_status, player):
         print(Fore.GREEN + f"{player} wins!")
     elif gameover_status == "😠":
         print_board(board, player)
-        print(f"{computer} wins!")
+        print(f"{player} wins!")
         print(Fore.RESET)
     else:
         print_board(board, player)
@@ -196,12 +196,14 @@ def print_game_result(gameover_status, player):
 
 
 def play_again():
-
-    play_again = input("Do you want to play again? (y/n): ")
-        .strip() \
-        .lower()
-            if play_again != "y":                
-    print(r"""
+    while True:
+        choice = input("Do you want to play again? (y/n): ").strip().lower()
+        if choice in {"y", "n"}:
+            return choice
+        else:
+            print(Fore.RED + "Invalid choice. Please enter y or n.")
+            print(Fore.RESET)
+            print(Fore.GREEN + r"""
  _  _                                           _                 _
 | || |___ _ __  ___   _  _ ___ _  _   ___ _ _  |_|___ _  _ ___ __| |
 | __ / _ \ '_ \/ -_\ | || / _ \ || | / -_\ ' \ | / _ \ || / -_\ _` |
@@ -212,10 +214,6 @@ def play_again():
   |_| |_\__|   |_|\__,_\__|   |_|\___/\___|_|
 """)
     print(Fore.RESET)
-        return
-                else:
-                    board = [" " for i in range(3 * 3)]
-                    x_to_play = True
 
 
 def play_game(player_name):
@@ -223,13 +221,10 @@ def play_game(player_name):
     Main game loop.
     """
     while True:
-        clear_screen()
-        player_name = intro()
-        print("Player name:", player_name)
         player = "❌"
         computer = "😠"
         x_to_play = True
-        board = [" " for i in range(3 * 3)]
+        board = [" " for _ in range(3 * 3)]
 
         while True:
             while True:
@@ -241,23 +236,23 @@ def play_game(player_name):
                     computer_move(board)
 
                 if gameover_status := check_gameover(board):
-                    print_game_result(gameover_status, player)
+                    print_game_result(gameover_status, player, board)
                     break
 
                 x_to_play = not x_to_play
 
-            if not play_again():
+            if not play_again() == "y":
                 return
-            else:                
-                board = [" " for i in range(3 * 3)]
+            else:
+                board = [" " for _ in range(3 * 3)]
                 x_to_play = True
 
 
 def main():
     clear_screen()
     player_name = intro()
-    print("Player name:", player_name)
     play_game(player_name)
+
 
 if __name__ == "__main__":
     main()
