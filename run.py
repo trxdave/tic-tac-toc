@@ -237,7 +237,7 @@ def play_game(player_name):
                 x_to_play = not x_to_play
 
             if not play_again() == "y":
-                print(Fore.GREEN + r"""
+                print(Fore.CYAN + r"""
  _  _                                           _                 _
 | || |___ _ __  ___   _  _ ___ _  _   ___ _ _  |_|___ _  _ ___ __| |
 | __ / _ \ '_ \/ -_\ | || / _ \ || | / -_\ ' \ | / _ \ || / -_\ _` |
