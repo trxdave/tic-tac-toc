@@ -50,6 +50,28 @@ def intro():
     print("---+---+---")
     print(" 7 | 8 | 9 ")
     print(Fore.RESET)
+    
+    print(Fore.RESET)
+    print("Get ready to enjoy the game!\n")
+    while True:
+        choice = input("Press 1 to start the game or Press 2 to view game rules: ").strip()
+        if choice == "1":
+            name = input(Fore.GREEN + "Please enter your name: ").strip()
+            if name.isalpha():
+                return name
+            else:
+                print(Fore.RED + f"{name} is Invalid choice. Please enter a valid name")
+                print(Fore.RESET)
+        elif choice == "2":
+            print_game_rules()
+        else:
+            print(Fore.RED + "Invalid choice. Please enter 1 or 2.")
+
+
+def print_game_rules():
+    """
+    Print the game rules.
+    """
     print(Fore.RED + "GAME RULES!")
     print(
         "The first player to get three of their marks in a row, column, or"
@@ -59,24 +81,6 @@ def intro():
         "If all the cells are filled without any player achieving three in a"
         "row, the game ends in a draw."
     )
-    print(Fore.RESET)
-    print("Get ready to enjoy the game!\n")
-    while True:
-        choice = input("Press 1 to start the game or Press 2 to view game rules: ").strip()
-        if choice == "1":
-            return True
-        elif choice == "2":
-            print_game_rules()
-        else:
-            print("Invalid choice. Please enter 1 or 2.")
-
-    
-        name = input(Fore.GREEN + "Please enter your name: ").strip()
-        if name.isalpha():
-            return name
-        else:
-            print(Fore.RED + f"{name} is invalid. Please enter a valid name")
-            print(Fore.RESET)
 
 
 def print_board(board, player):
@@ -152,6 +156,27 @@ def computer_move(board):
         if board[move] == " ":
             board[move] = "😠"
             return
+
+
+def player_move(board, player, player_name):
+    """
+    Get player's move.
+    """
+    valid_input = False
+    while not valid_input:
+        try:
+            move = int(input(f"{player_name}'s turn (Enter a number from 1-9):"))
+            if 1 <= move <= 9:
+                if board[move - 1] == " ":
+                    valid_input = True
+                    board[move - 1] = player
+                else:
+                    print(Fore.RED + "That cell is already occupied. Try again.")
+            else:
+                print("Invalid input. Please enter a number from 1 to 9.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+            print(Fore.RESET)
 
 
 def main():
