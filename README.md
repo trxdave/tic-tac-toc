@@ -21,13 +21,18 @@ Get ready to exercise your tactical skills and experience the thrill of victory 
 
 ### Colours ###
 
-- Green: Used for the welcome message and player prompts.
-- Yellow: Used for game instructions and important information about the game.
-- Cyan: Used for displaying the Tic Tac Toe board and numerical grid positions.
-- Red: Used for error messages or warnings.
-- Reset: Used to reset the color back to default after displaying colored text.
-
 These colors are implemented using the Colorama library in Python, which allows for easy cross-platform colored text output in the console. You can customize the colors or add more as per your preference by modifying the code.
+
+- #### Green: #### 
+Used for the welcome message and player prompts.
+- #### Yellow: #### 
+Used for game instructions and important information about the game.
+- #### Cyan: #### 
+Used for displaying the Tic Tac Toe board and numerical grid positions.
+- #### Red: #### 
+Used for error messages or warnings.
+- #### Reset: #### 
+Used to reset the colour back to default after displaying coloured text.
 
 - [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
 - [colorma 0.4.6](https://pypi.org/project/colorama/)
@@ -42,43 +47,62 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ![alt text](documents/flowchart/chart.png)
 
-- Start: This is the starting point of the Tic Tac Toe game.
+- #### Start: #### 
+    This is the starting point of the Tic Tac Toe game.
 
-- Initialize Game: Game initialization sets up the environment, including the game board and variables.
+- #### Initialize Game: #### 
+    Game initialization sets up the environment, including the game board and variables.
 
-- Main Game Loop: The main game loop runs until the game ends.
+- #### Main Game Loop: #### 
+    The main game loop runs until the game ends.
 
-- Get Player Name: The player to enter their name.
+- #### Get Player Name: #### 
+    The player to enter their name.
 
-- Game Introduction: Display game intro with rules and instructions to player.
+- #### Game Introduction: #### 
+    Display game intro with rules and instructions to player.
 
-- Game Board: Show the game board status to player.
+- #### Game Board: #### 
+    Show the game board status to player.
 
-- Player's Turn: Player's turn. Place ❌ or 😠 on unoccupied spot.
+- #### Player's Turn: #### 
+    Player's turn. Place ❌ or 😠 in an unoccupied spot.
 
-- Update Board: Player's move updates game board.
+- #### Update Board: #### 
+    The player's move updates the game board.
 
-- Check for Win/Draw: The program checks for a win by either player or a draw.
+- #### Check for Win/Draw: #### 
+    The program checks for a win by either a player or a draw.
 
-- Win or Draw: If the game ends in a win or draw, this step handles the outcome.
+- #### Win or Draw: #### 
+    If the game ends in a win or draw, this step handles the outcome.
 
-- Play Again?: After the game ends, players can choose to restart from the beginning.
+- #### Play Again?: ####
+    After the game ends, players can choose to restart from the beginning.
 
-- Continue Game: Players switch turns if the game continues.
+- #### Continue Game: #### 
+    Players switch turns if the game continues.
 
-- Switch Players: Players must take turns making moves.
+- #### Switch Players: #### 
+    Players must take turns making moves.
 
-- Computer's Turn: The program calculates the computer's move based on a predetermined strategy during its turn.
+- #### Computer's Turn: ####
+    The program calculates the computer's move based on a predetermined strategy during its turn.
 
-- Update Board: The game board is updated after the computer's move, like the player's turn.
+- #### Update Board: #### 
+    The game board is updated after the computer's move, like the player's turn.
 
-- Check for Win/Draw: Checks if either player won or if it's a draw.
+- #### Check for Win/Draw: #### 
+    Checks if either player won or if it's a draw.
 
-- Win or Draw: Handle outcome when player wins or game ends in draw.
+- #### Win or Draw: #### 
+    Handle the outcome when a player wins or the game ends in a draw.
 
-- Play Again?: Players can choose to play again once the game is over.
+- #### Play Again?: #### 
+    Players can choose to play again once the game is over.
 
-- End: "The flowchart ends here and so does the Tic Tac Toe game."
+- #### End: #### 
+    The flowchart ends here and so does the Tic Tac Toe game.
 
 ## Features ##
 
