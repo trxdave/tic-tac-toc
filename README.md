@@ -198,3 +198,15 @@ In future updates of the Tic Tac Toe game,
 * Add a feature to display the highest score achieved by the player on the terminal interface. 
 * Leaderboard feature where players can view the highest scores of all players who have played the game. This will competitive element to the game and motivate players to improve their skills.
 * Additional difficulty levels for the Computer opponent.
+* Play against a player and to be able to switch between playing against players 2 and computer.
+
+# Bugs #
+
+Solved bugs:
+
+* Had few issues with indentations and was not able to run the code.
+* Had a mistake in def move function which make my code run in the loop without moving to the next step in the game, took me a while to spot it.
+* Had inputs were not handled properly, leading to unexpected behavior or crashes.
+* Had Heroku bug and it is now fixed.
+* Had Gitpod files problem and it is repaired by Code Institute Tutor Assistance and Heroku problem but it is repaired, Thanks to Code Institute Tutor Assitance.
+* Please note there is one problem .gitpod.yml were missing files - no clue what happen there, I tried look up everything nothing can fix. ![alt text](documents/images/gitpod.png)
