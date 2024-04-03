@@ -179,7 +179,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 * In the context of Tic Tac Toe, emojis can be used to represent the players' moves on the game board instead of traditional X's and O's. Emojis add a fun and visually appealing element to the game, making it more engaging for players. [Emoji](https://emojidb.org/tic-tac-toe-emojis)
 * It helps users improve the quality and correctness of their written communication by identifying grammatical errors, spelling mistakes, punctuation issues, and style inconsistencies in their text. [Grammarly](https://www.grammarly.com/)
 * Start read the instructions on how to use Tic Tac Toe [Start read Tic Tac Toe](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
-* Enter the strip() [Strip() Function](https://www.mygreatlearning.com/blog/strip-in-python/)
+* Learn about .strip() and Enter the .strip() [Strip() Function](https://www.mygreatlearning.com/blog/strip-in-python/)
 * How to use Python Raw String [Raw String](https://www.digitalocean.com/community/tutorials/python-raw-string)
 
 # Validator Testing #
@@ -192,5 +192,9 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 # Future Plans #
 
-* I plan to add the highest score from Tic Tac Toe to a Google Sheet and display it on the terminal.
+In future updates of the Tic Tac Toe game,
+
+* Integration with Goolge sheets: The highest scores from Tic Tac Toe games.
+* Add a feature to display the highest score achieved by the player on the terminal interface. 
+* Leaderboard feature where players can view the highest scores of all players who have played the game. This will competitive element to the game and motivate players to improve their skills.
 * Additional difficulty levels for the Computer opponent.
