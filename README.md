@@ -172,14 +172,15 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 * GitHub as software hosting platform that enables users to store their projects in a remote location. This allows for easy access and collaboration on the project from different locations. [GitHub](https://www.github.com/)
 * GitPod as developer hosting platform. [GitPod](https://www.gitpod.com)
 * Heroku is a cloud platform as a service (PaaS) that allows developers to build, deploy, manage, and scale applications effortlessly. It provides a platform for hosting web applications, databases, and other software services, removing the need for developers to manage underlying infrastructure. [Heroku](https://id.heroku.com/login)
+* Perplexity Searching for useful and easy-to-explain. [Perplexity](https://www.perplexity.ai/)
 * A CI (Continuous Integration) Python linter is a tool used in the context of Continuous Integration pipelines to check Python code for adherence to coding standards, best practices, and potential errors or style issues. [CI Python Linter](https://pep8ci.herokuapp.com/)
 * Logo fonts generated using [patorjk's Text to ASCII Art Generator](https://patorjk.com/software/taag/#p=testall&f=Impossible&t=Tic%20tac%20toe)
 * Lucidchart is a web-based diagramming tool used for creating flowcharts, mind maps, organizational charts, network diagrams, and other types of visual representations. 
  [LucidChart](https://www.lucidchart.com/pages/)
 * In the context of Tic Tac Toe, emojis can be used to represent the players' moves on the game board instead of traditional X's and O's. Emojis add a fun and visually appealing element to the game, making it more engaging for players. [Emoji](https://emojidb.org/tic-tac-toe-emojis)
 * It helps users improve the quality and correctness of their written communication by identifying grammatical errors, spelling mistakes, punctuation issues, and style inconsistencies in their text. [Grammarly](https://www.grammarly.com/)
-* Start read the instructions on how to use Tic Tac Toe [Start read Tic Tac Toe](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
-* Learn about .strip() and Enter the .strip() [Strip() Function](https://www.mygreatlearning.com/blog/strip-in-python/)
+* Start reading the instructions on how to use Tic Tac Toe [Start reading Tic Tac Toe](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
+* Learned for .strip() and Enter the .strip() [Strip() Function](https://www.mygreatlearning.com/blog/strip-in-python/)
 * How to use Python Raw String [Raw String](https://www.digitalocean.com/community/tutorials/python-raw-string)
 
 # Validator Testing #
@@ -210,3 +211,21 @@ Solved bugs:
 * Had Heroku bug and it is now fixed.
 * Had Gitpod files problem and it is repaired by Code Institute Tutor Assistance and Heroku problem but it is repaired, Thanks to Code Institute Tutor Assitance.
 * Please note there is one problem .gitpod.yml were missing files - no clue what happen there, I tried look up everything nothing can fix. ![alt text](documents/images/gitpod.png)
+
+# Deployment #
+
+To deploy, I followed step by step instructions from Code Institute Deployment Video
+
+* Heroku opened the dashboard
+* Created a new app
+* Connected my Github and chose the needed
+* In setting Config Vars PORT 8000
+* Add buildpacks - Python and nodejs
+* Choose manual deployment and deployed Branch
+* View App
+
+# Credits #
+
+* [Youtube Python Tic Tac Toe Tutorial](https://www.youtube.com/watch?v=dK6gJw4-NCo&list=PLr66KBzyOhBXULXhbdP_Z5dGmSiI27fVc)
+* [Start reading Tic Tac Toe 1](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
+* [Start reading Tic Tac Toe 2](https://inventwithpython.com/invent4thed/chapter10.html)
