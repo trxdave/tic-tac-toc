@@ -21,7 +21,7 @@ Get ready to exercise your tactical skills and experience the thrill of victory 
 
 ### Colours ###
 
-These colors are implemented using the Colorama library in Python, which allows for easy cross-platform colored text output in the console. You can customize the colors or add more as per your preference by modifying the code.
+These colours are implemented using the Colorama library in Python, which allows for easy cross-platform coloured text output in the console. You can customize the colours or add more as per your preference by modifying the code.
 
 - #### Green: #### 
 Used for the welcome message and player prompts.
@@ -46,22 +46,22 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 ![alt text](documents/flowchart/chart.png)
 
 - #### Start: #### 
-    This is the starting point of the Tic Tac Toe game.
+    This is the beginning stage of the Tic Tac Toe game.
 
 - #### Initialize Game: #### 
-    Game initialization sets up the environment, including the game board and variables.
+    During game initialization, the environment is prepared, which includes setting up the game board and variables.
 
 - #### Main Game Loop: #### 
     The main game loop runs until the game ends.
 
 - #### Get Player Name: #### 
-    The player to enter their name.
+    The player is to enter their name.
 
 - #### Game Introduction: #### 
-    Display game intro with rules and instructions to player.
+    Display the game introduction with rules and instructions to the player.
 
 - #### Game Board: #### 
-    Show the game board status to player.
+    Show the game board status to the player.
 
 - #### Player's Turn: #### 
     Player's turn. Place ❌ or 😠 in an unoccupied spot.
