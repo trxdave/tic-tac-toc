@@ -15,7 +15,7 @@ Get ready to exercise your tactical skills and experience the thrill of victory 
 
 ## Live Project ##
 
-[View Live Project Here](https://tic-tac-toc-5757397cee14.herokuapp.com/)
+View the live project here: [Tic Tac Toe](https://tic-tac-toc-5757397cee14.herokuapp.com/)
 
 ## Design ##
 
