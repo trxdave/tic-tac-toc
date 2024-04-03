@@ -31,8 +31,6 @@ Used for game instructions and important information about the game.
 Used for displaying the Tic Tac Toe board and numerical grid positions.
 - #### Red: #### 
 Used for error messages or warnings.
-- #### Reset: #### 
-Used to reset the colour back to default after displaying coloured text.
 
 - [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
 - [colorma 0.4.6](https://pypi.org/project/colorama/)
@@ -162,18 +160,27 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
     * Install Colorama using this terminal command:
     ![alt text](<documents/images/install-colorama.png>)
 
+    * When installing packages to be added to requirements.txt, type 'pip3 freeze > requirements.txt' in the terminal.
+    - [Pip Freeze > Requirements.txt](https://dev.to/eskabore/pip-freeze-requirementstxt-a-beginners-guide-5e2m)
+
+    * To start the game, run the following command in terminal
+    ![alt text](documents/images/python3-run.py.png)
+    - [Run Python](https://pythonbasics.org/execute-python-scripts/)
+
 ## Frameworks - Libraries - Programs Used ##
 
 * GitHub as software hosting platform that enables users to store their projects in a remote location. This allows for easy access and collaboration on the project from different locations. [GitHub](https://www.github.com/)
 * GitPod as developer hosting platform. [GitPod](https://www.gitpod.com)
 * Heroku is a cloud platform as a service (PaaS) that allows developers to build, deploy, manage, and scale applications effortlessly. It provides a platform for hosting web applications, databases, and other software services, removing the need for developers to manage underlying infrastructure. [Heroku](https://id.heroku.com/login)
 * A CI (Continuous Integration) Python linter is a tool used in the context of Continuous Integration pipelines to check Python code for adherence to coding standards, best practices, and potential errors or style issues. [CI Python Linter](https://pep8ci.herokuapp.com/)
-* Logo fonts Tic Tac Toe and Hope you enjoyed Tic Tac Toe. [patorjk](https://patorjk.com/software/taag/#p=testall&f=Impossible&t=Tic%20tac%20toe)
+* Logo fonts generated using [patorjk's Text to ASCII Art Generator](https://patorjk.com/software/taag/#p=testall&f=Impossible&t=Tic%20tac%20toe)
 * Lucidchart is a web-based diagramming tool used for creating flowcharts, mind maps, organizational charts, network diagrams, and other types of visual representations. 
  [LucidChart](https://www.lucidchart.com/pages/)
 * In the context of Tic Tac Toe, emojis can be used to represent the players' moves on the game board instead of traditional X's and O's. Emojis add a fun and visually appealing element to the game, making it more engaging for players. [Emoji](https://emojidb.org/tic-tac-toe-emojis)
 * It helps users improve the quality and correctness of their written communication by identifying grammatical errors, spelling mistakes, punctuation issues, and style inconsistencies in their text. [Grammarly](https://www.grammarly.com/)
 * Start read the instructions on how to use Tic Tac Toe [Start read Tic Tac Toe](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
+* Enter the strip() [Strip() Function](https://www.mygreatlearning.com/blog/strip-in-python/)
+* How to use Python Raw String [Raw String](https://www.digitalocean.com/community/tutorials/python-raw-string)
 
 # Validator Testing #
 
@@ -182,3 +189,8 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 * I used CI Python Linter (https://pep8ci.herokuapp.com) to remove all errors from the code. The code is now error-free and optimized for performance.
 
 ![alt text](<documents/testing/ci-python-linter.png>)
+
+# Future Plans #
+
+* I plan to add the highest score from Tic Tac Toe to a Google Sheet and display it on the terminal.
+* Additional difficulty levels for the Computer opponent.
