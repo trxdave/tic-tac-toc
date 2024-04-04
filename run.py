@@ -183,7 +183,7 @@ def player_move(board, player, player_name):
             else:
                 print("Invalid input. Please enter a number from 1 to 9.")
         except ValueError:
-            print("Invalid input. Please enter a number.")
+            print(Fore.RED + "Invalid input. Please enter a number.")
             print(Fore.RESET)
 
 
