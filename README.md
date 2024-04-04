@@ -125,6 +125,12 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ![alt text](documents/images/player-turn.png)
 
+### Game Rules: ###
+
+- Displays the set of rules of the game
+
+![alt text](documents/images/rules.png)
+
 ### Computer Move: ###
 
 - This function is responsible for executing the logic that determines the computer player's move.
@@ -139,9 +145,9 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - Each game consists of alternating, player and computer turns until a win or draw.
 - At the end of every game, the system prompts the player to ask if they would like to play again.
 
-- Draw ![alt text](documents/images/draw.png)
-- Wins ![alt text](documents/images/player-win.png)
-- Do you want to play again? press n for no and show 'Hope you enjoyed Tic Tac Toe' ![alt text](documents/images/no.png)
+![alt text](documents/images/draw.png)
+![alt text](documents/images/player-win.png)
+![alt text](documents/images/no.png)
 
 ### Input Validation: ###
 
@@ -149,12 +155,14 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - Name input only accepts alphabetic characters.
 - Move input only accepts integers from 1 to 9 and checks if the chosen position is empty.
 
-- Enter name 
+![alt text](documents/images/name.png)
 
 ### Styling with Colorama: ###
 
 - The colorama library is used for coloring the console output, enhancing the visual appeal of the game.
 - Different colors are used for headers, prompts, and game status messages, making them more distinguishable and engaging.
+
+![alt text](documents/images/colour.png)
 
 # Technologies Used #
 
