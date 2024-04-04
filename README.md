@@ -23,13 +23,13 @@ View the live project here: [Tic Tac Toe](https://tic-tac-toc-5757397cee14.herok
 
 These colours are implemented using the Colorama library in Python, which allows for easy cross-platform coloured text output in the console. You can customize the colours or add more as per your preference by modifying the code.
 
-- #### <code style="color : green">Green:</code> #### 
+- #### <span style="color:green">Green:</span> #### 
 Used for the welcome message and player prompts.
-- #### <code style="color : yellow">Yellow:</code> #### 
+- #### <span style="color:yellow">Yellow:</span> #### 
 Used for game instructions and important information about the game.
-- #### <code style="color : Cyan">Cyan:</code> #### 
+- #### <span style="color:cyan">Cyan:</span> #### 
 Used for displaying the Tic Tac Toe board and numerical grid positions.
-- #### <code style="color : Red">Red:</code> #### 
+- #### <span style="color:red">Red:</span> #### 
 Used for error messages or warnings.
 
 - [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
