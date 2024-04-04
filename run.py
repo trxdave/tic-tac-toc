@@ -38,7 +38,7 @@ def intro():
         "The player who succeeds in placing three of their marks in a "
         "horizontal, vertical, or diagonal row wins the game.\n"
         "You will be playing against the computer, which will be represented "
-        "by '😠'. You will be '❌'.\n"
+        "by 😠. You will be ❌.\n"
         "To make your move, simply enter a number from 1 to 9 corresponding "
         "to the position you want to mark on the board, as shown below:"
     )
