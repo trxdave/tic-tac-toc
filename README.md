@@ -169,7 +169,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 ![alt text](documents/images/tryagain.png)
 
 - Enter a number from 1-9, letters and special characters are Invalid input.
-
+![alt text](documents/images/inputerror.png)
 
 ### Styling with Colorama: ###
 
