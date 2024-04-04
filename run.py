@@ -36,14 +36,16 @@ def intro():
 """)
     print(Fore.RESET)
     print(
-        Fore.YELLOW + "Classic game where two players take turns marking "
+        Fore.YELLOW + "1. Classic game where two players take turns marking "
         "spaces in a 3x3 grid.\n"
-        "The player who succeeds in placing three of their marks in a "
-        "horizontal, vertical, or diagonal row wins the game.\n"
-        "You will be playing against the computer, which will be represented "
-        "by 😠. You will be ❌.\n"
-        "To make your move, simply enter a number from 1 to 9 corresponding "
-        "to the position you want to mark on the board, as shown below:"
+        "2. The player who succeeds in placing three of their marks in a "
+        "horizontal, "
+        "vertical, or diagonal row wins the game.\n"
+        "3. You will be playing against the computer, which will be "
+        "represented by 😠. You will be ❌.\n"
+        "4. To make your move, simply enter a number from 1 to 9 corresponding"
+        "to "
+        "the position you want to mark on the board, as shown below:"
     )
 
     print(Fore.RESET)
