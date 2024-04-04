@@ -39,13 +39,11 @@ def intro():
         Fore.YELLOW + "1. Classic game where two players take turns marking "
         "spaces in a 3x3 grid.\n"
         "2. The player who succeeds in placing three of their marks in a "
-        "horizontal, "
-        "vertical, or diagonal row wins the game.\n"
+        "horizontal, vertical, or diagonal row wins the game.\n"
         "3. You will be playing against the computer, which will be "
         "represented by 😠. You will be ❌.\n"
         "4. To make your move, simply enter a number from 1 to 9 corresponding"
-        "to "
-        "the position you want to mark on the board, as shown below:"
+        "to the position you want to mark on the board, as shown below:"
     )
 
     print(Fore.RESET)
@@ -91,6 +89,7 @@ def print_game_rules():
         "5. If all the cells are filled without any player achieving three in"
         "a row, the game ends in a draw."
     )
+
     print("GOOD LUCK! 😍")
 
 
