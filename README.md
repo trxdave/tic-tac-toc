@@ -146,7 +146,9 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - At the end of every game, the system prompts the player to ask if they would like to play again.
 
 ![alt text](documents/images/draw.png)
+
 ![alt text](documents/images/player-win.png)
+
 ![alt text](documents/images/no.png)
 
 ### Input Validation: ###
@@ -157,18 +159,24 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ![alt text](documents/images/name.png)
 
+![alt text](documents/images/input1-9.png)
+
 ### Input Responses Error ###
 
 - Press 1 and Press 2 if press 3 upward/special characters are Invalid choices.
+
 ![alt text](documents/images/press.png)
 
 - Input for their name and enter by number and special characters are Invalid choices.
+
 ![alt text](documents/images/Invalidchoice.png)
 
 - Enter a number from 1-9 the cell is already occupied.
+
 ![alt text](documents/images/tryagain.png)
 
 - Enter a number from 1-9, letters and special characters are Invalid input.
+
 ![alt text](documents/images/inputerror.png)
 
 ### Styling with Colorama: ###
