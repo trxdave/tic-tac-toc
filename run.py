@@ -75,14 +75,18 @@ def print_game_rules():
     Print the game rules.
     """
     print(Fore.RED + "GAME RULES!")
+    print("1. Game is played on a 3x3 board")
+    print("2. Player's symbol will be ❌ and computer's symbol will be 😠")
+    print("3. Players take turn to choose the cell on the game board")
     print(
-        "The first player to get three of their marks in a row, column, or"
+        "4. The first player to get three of their marks in a row, column, or"
         "diagonal wins the game."
     )
     print(
-        "If all the cells are filled without any player achieving three in a"
-        "row, the game ends in a draw."
+        "5. If all the cells are filled without any player achieving three in"
+        "a row, the game ends in a draw."
     )
+    print("GOOD LUCK! 😍")
 
 
 def print_board(board, player):

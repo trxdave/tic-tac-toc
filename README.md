@@ -23,7 +23,7 @@ View the live project here: [Tic Tac Toe](https://tic-tac-toc-5757397cee14.herok
 
 These colours are implemented using the Colorama library in Python, which allows for easy cross-platform coloured text output in the console. You can customize the colours or add more as per your preference by modifying the code.
 
-- #### <font color="green">Green:</font> #### 
+- #### Green: #### 
 Used for the welcome message and player prompts.
 - #### Yellow: #### 
 Used for game instructions and important information about the game.
@@ -123,10 +123,14 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - The function checks the board state to determine the winner or if it's a draw and if the game is over. 
 - It checks for winning conditions in rows, columns, and diagonals, as well as for a draw condition.
 
+![alt text](documents/images/player-turn.png)
+
 ### Computer Move: ###
 
 - This function is responsible for executing the logic that determines the computer player's move.
 - After checking if the computer can win on its next move, if not, it blocks the player from winning, and if neither, it makes a random move.
+
+![alt text](documents/images/game.png)
 
 ### Main Game Loop ###
 
@@ -135,11 +139,17 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - Each game consists of alternating, player and computer turns until a win or draw.
 - At the end of every game, the system prompts the player to ask if they would like to play again.
 
+- Draw ![alt text](documents/images/draw.png)
+- Wins ![alt text](documents/images/player-win.png)
+- Do you want to play again? press n for no and show 'Hope you enjoyed Tic Tac Toe' ![alt text](documents/images/no.png)
+
 ### Input Validation: ###
 
 - It ensures that the player's input for their name and moves are valid.
 - Name input only accepts alphabetic characters.
 - Move input only accepts integers from 1 to 9 and checks if the chosen position is empty.
+
+- Enter name 
 
 ### Styling with Colorama: ###
 
