@@ -157,10 +157,24 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ![alt text](documents/images/name.png)
 
+### Input Responses Error ###
+
+- Press 1 and Press 2 if press 3 upward/special characters are Invalid choices.
+![alt text](documents/images/press.png)
+
+- Input for their name and enter by number and special characters are Invalid choices.
+![alt text](documents/images/Invalidchoice.png)
+
+- Enter a number from 1-9 the cell is already occupied.
+![alt text](documents/images/tryagain.png)
+
+- Enter a number from 1-9, letters and special characters are Invalid input.
+
+
 ### Styling with Colorama: ###
 
 - The colorama library is used for coloring the console output, enhancing the visual appeal of the game.
-- Different colors are used for headers, prompts, and game status messages, making them more distinguishable and engaging.
+- Different colours are used for headers, prompts, and game status messages, making them more distinguishable and engaging.
 
 ![alt text](documents/images/colour.png)
 
@@ -179,11 +193,11 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
     ![alt text](<documents/images/install-colorama.png>)
 
     * When installing packages to be added to requirements.txt, type 'pip3 freeze > requirements.txt' in the terminal.
-    - [Pip Freeze > Requirements.txt](https://dev.to/eskabore/pip-freeze-requirementstxt-a-beginners-guide-5e2m)
+    [Pip Freeze > Requirements.txt](https://dev.to/eskabore/pip-freeze-requirementstxt-a-beginners-guide-5e2m)
 
     * To start the game, run the following command in terminal
     ![alt text](documents/images/python3-run.py.png)
-    - [Run Python](https://pythonbasics.org/execute-python-scripts/)
+    [Run Python](https://pythonbasics.org/execute-python-scripts/)
 
 ## Frameworks - Libraries - Programs Used ##
 
