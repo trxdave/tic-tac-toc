@@ -200,7 +200,7 @@ def print_game_result(gameover_status, player, board):
         print(Fore.GREEN + f"{player} wins!")
     elif gameover_status == "😠":
         print_board(board, player)
-        print(f"{player} wins!")
+        print(Fore.RED + "Computer wins!")
         print(Fore.RESET)
     else:
         print_board(board, player)
