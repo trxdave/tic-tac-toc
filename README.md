@@ -209,9 +209,9 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ## Frameworks - Libraries - Programs Used ##
 
-* GitHub as software hosting platform that enables users to store their projects in a remote location. This allows for easy access and collaboration on the project from different locations. [GitHub](https://www.github.com/)
+* GitHub is a software hosting platform that enables users to store their projects in a remote location. This allows for easy access and collaboration on the project from different locations. [GitHub](https://www.github.com/)
 * GitPod as developer hosting platform. [GitPod](https://www.gitpod.com)
-* Heroku is a cloud platform as a service (PaaS) that allows developers to build, deploy, manage, and scale applications effortlessly. It provides a platform for hosting web applications, databases, and other software services, removing the need for developers to manage underlying infrastructure. [Heroku](https://id.heroku.com/login)
+* Heroku is a cloud platform as a service (PaaS) that allows developers to build, deploy, manage, and scale applications effortlessly. It provides a platform for hosting web applications, databases, and other software services, removing the need for developers to manage the underlying infrastructure. [Heroku](https://id.heroku.com/login)
 * Perplexity Searching for useful and easy-to-explain. [Perplexity](https://www.perplexity.ai/)
 * A CI (Continuous Integration) Python linter is a tool used in the context of Continuous Integration pipelines to check Python code for adherence to coding standards, best practices, and potential errors or style issues. [CI Python Linter](https://pep8ci.herokuapp.com/)
 * Logo fonts generated using, Fonts name small [patorjk's Text to ASCII Art Generator](https://patorjk.com/software/taag/#p=testall&f=Impossible&t=Tic%20tac%20toe)
@@ -222,6 +222,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 * Start reading the instructions on how to use Tic Tac Toe [Start reading Tic Tac Toe](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
 * Learned for .strip() and Enter the .strip() [Strip() Function](https://www.mygreatlearning.com/blog/strip-in-python/)
 * How to use Python Raw String [Raw String](https://www.digitalocean.com/community/tutorials/python-raw-string)
+* Code Institue Mentor gave me [OS Clear Screen](https://www.geeksforgeeks.org/clear-screen-python/)
 
 # Validator Testing #
 
@@ -269,3 +270,6 @@ To deploy, I followed step by step instructions from Code Institute Deployment V
 * [Youtube Python Tic Tac Toe Tutorial](https://www.youtube.com/watch?v=dK6gJw4-NCo&list=PLr66KBzyOhBXULXhbdP_Z5dGmSiI27fVc)
 * [Start reading Tic Tac Toe 1](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
 * [Start reading Tic Tac Toe 2](https://inventwithpython.com/invent4thed/chapter10.html)
+* [OS Clear Screen](https://www.geeksforgeeks.org/clear-screen-python/)
+* [w3School for Name use isalpha](https://www.w3schools.com/python/ref_string_isalpha.asp)
+* [Name 10 Charachter](https://realpython.com/len-python-function/)

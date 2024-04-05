@@ -61,7 +61,7 @@ def intro():
 
         if choice == "1":
             name = input(Fore.GREEN + "Please enter your name: ").strip()
-            if name.isalpha():
+            if name.isalpha() and len(name) <= 10:
                 return name
             else:
                 print(Fore.RED + f"{name} is Invalid choice. "
