@@ -23,13 +23,13 @@ View the live project here: [Tic Tac Toe](https://tic-tac-toc-5757397cee14.herok
 
 These colours are implemented using the Colorama library in Python, which allows for easy cross-platform coloured text output in the console. You can customize the colours or add more as per your preference by modifying the code.
 
-- #### Green: #### 
+- ### Green: ###
 Used for the welcome message and player prompts.
-- #### Yellow: #### 
+- ### Yellow: ###
 Used for game instructions and important information about the game.
-- #### Cyan: #### 
+- ### Cyan: ###
 Used for displaying the Tic Tac Toe board and numerical grid positions.
-- #### Red: #### 
+- ### Red: ###
 Used for error messages or warnings.
 
 - [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
@@ -45,61 +45,61 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ![alt text](documents/flowchart/chart.png)
 
-- #### Start: #### 
+- ### Start: ###
     This is the beginning stage of the Tic Tac Toe game.
 
-- #### Initialize Game: #### 
+- ### Initialize Game: ###
     During game initialization, the environment is prepared, which includes setting up the game board and variables.
 
-- #### Main Game Loop: #### 
+- ### Main Game Loop: ###
     The main game loop runs until the game ends.
 
-- #### Get Player Name: #### 
+- ### Get Player Name: ###
     The player is to enter their name.
 
-- #### Game Introduction: #### 
+- ### Game Introduction: ###
     Display the game introduction with rules and instructions to the player.
 
-- #### Game Board: #### 
+- ### Game Board: ###
     Show the game board status to the player.
 
-- #### Player's Turn: #### 
+- ### Player's Turn: ###
     Player's turn. Place ❌ or 😠 in an unoccupied spot.
 
-- #### Update Board: #### 
+- ### Update Board: ### 
     The player's move updates the game board.
 
-- #### Check for Win/Draw: #### 
+- ### Check for Win/Draw: ###
     The program checks for a win by either a player or a draw.
 
-- #### Win or Draw: #### 
+- ### Win or Draw: ###
     If the game ends in a win or draw, this step handles the outcome.
 
-- #### Play Again?: ####
+- ### Play Again?: ###
     After the game ends, players can choose to restart from the beginning.
 
-- #### Continue Game: #### 
+- ### Continue Game: ###
     Players switch turns if the game continues.
 
-- #### Switch Players: #### 
+- ### Switch Players: ###
     Players must take turns making moves.
 
-- #### Computer's Turn: ####
+- ### Computer's Turn: ###
     The program calculates the computer's move based on a predetermined strategy during its turn.
 
-- #### Update Board: #### 
+- ### Update Board: ###
     The game board is updated after the computer's move, like the player's turn.
 
-- #### Check for Win/Draw: #### 
+- ### Check for Win/Draw: ###
     Checks if either player won or if it's a draw.
 
-- #### Win or Draw: #### 
+- ### Win or Draw: ###
     Handle the outcome when a player wins or the game ends in a draw.
 
-- #### Play Again?: #### 
+- ### Play Again?: ### 
     Players can choose to play again once the game is over.
 
-- #### End: #### 
+- ### End: ### 
     The flowchart ends here and so does the Tic Tac Toe game.
 
 ## Features ##
@@ -272,4 +272,4 @@ To deploy, I followed step by step instructions from Code Institute Deployment V
 * [Start reading Tic Tac Toe 2](https://inventwithpython.com/invent4thed/chapter10.html)
 * [OS Clear Screen](https://www.geeksforgeeks.org/clear-screen-python/)
 * [w3School for Name use isalpha](https://www.w3schools.com/python/ref_string_isalpha.asp)
-* [Name 10 Charachter](https://realpython.com/len-python-function/)
+* [Name 10 Character](https://realpython.com/len-python-function/)
