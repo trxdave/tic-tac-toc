@@ -222,7 +222,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 * Start reading the instructions on how to use Tic Tac Toe [Start reading Tic Tac Toe](https://medium.com/chat-gpt-now-writes-all-my-articles/creating-a-tic-tac-toe-game-in-python-859fbad07f30)
 * Learned for .strip() and Enter the .strip() [Strip() Function](https://www.mygreatlearning.com/blog/strip-in-python/)
 * How to use Python Raw String [Raw String](https://www.digitalocean.com/community/tutorials/python-raw-string)
-* Code Institue Mentor gave me [OS Clear Screen](https://www.geeksforgeeks.org/clear-screen-python/)
+* Code Institue Mentor recommended that OS Clear Screen [OS Clear Screen](https://www.geeksforgeeks.org/clear-screen-python/)
 
 # Validator Testing #
 
