@@ -197,7 +197,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - The mentor recommended that we use YouTube to assist us with installing Colorama color into the game.
 - [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
 
-    * Install Colorama using this terminal command:
+    * Install Colorama using this terminal command: pip3 install colorama
     ![alt text](<documents/images/install-colorama.png>)
 
     * When installing packages to be added to requirements.txt, type 'pip3 freeze > requirements.txt' in the terminal.
