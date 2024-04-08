@@ -333,3 +333,4 @@ For either method, you will need to install any applicable packages found within
 * [OS Clear Screen](https://www.geeksforgeeks.org/clear-screen-python/)
 * [w3School for Name use isalpha](https://www.w3schools.com/python/ref_string_isalpha.asp)
 * [Name 10 Character](https://realpython.com/len-python-function/)
+* [Lowercase a String](https://www.freecodecamp.org/news/python-to-lowercase-a-string-str-lower-example/)
