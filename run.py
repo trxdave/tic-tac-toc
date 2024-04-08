@@ -152,15 +152,6 @@ def computer_move(board):
             # Reset the move if it doesn't lead to a win
             board[i] = " "
 
-    # Check if player can win and block them
-    for i in range(3 * 3):
-        if board[i] == " ":
-            board[i] = "❌"
-            if check_gameover(board) == "❌":
-                board[i] = "😠"
-                return
-            board[i] = " "
-
     # Choose a random empty cell
     while True:
         move = random.randrange(0, 3 * 3, 1)
