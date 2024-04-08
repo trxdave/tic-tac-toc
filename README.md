@@ -13,9 +13,18 @@ Here are the game rules:
 
 Get ready to exercise your tactical skills and experience the thrill of victory in this classic game of Tic Tac Toe!
 
+## AM I Responsive ##
+
+Here's your deployed site as an example:
+[Am I Responsive](https://ui.dev/amiresponsive?url=https://tic-tac-toc-5757397cee14.herokuapp.com)
+
 ## Live Project ##
 
 View the live project here: [Tic Tac Toe](https://tic-tac-toc-5757397cee14.herokuapp.com/)
+
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/trxdave/tic-tac-toc)](https://github.com/trxdave/tic-tac-toc/commits/main)
+[![GitHub last commit](https://img.shields.io/github/last-commit/trxdave/tic-tac-toc)](https://github.com/trxdave/tic-tac-toc/commits/main)
+[![GitHub repo size](https://img.shields.io/github/repo-size/trxdave/tic-tac-toc)](https://github.com/trxdave/tic-tac-toc)
 
 ## Design ##
 
@@ -43,7 +52,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ## Flowchart ##
 
-![alt text](documents/flowchart/chart.png)
+![alt text](documentation/flowchart/chart.png)
 
 - ### Start: ###
     This is the beginning stage of the Tic Tac Toe game.
@@ -109,34 +118,34 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - At the game's start, a stylish header appears along with a brief introduction to the rules and mechanics.
 - The system prompts the user to choose between two options: Press 1 to start the game or Press 2 to view the game rules. The system also requests the user's name, ensuring that only alphabetic characters are accepted.
 
-![alt text](documents/images/welcome.png)
+![alt text](documentation/images/welcome.png)
 
 ### Printing the Game Board: ###
 
 - The 'print_board()' function displays the current state of the Tic Tac Toe game board to the player.
 - It shows the positions on the board with numbers for player reference.
 
-![alt text](documents/images/print-board.png)
+![alt text](documentation/images/print-board.png)
 
 ### Game Logic: ###
 
 - The function checks the board state to determine the winner or if it's a draw and if the game is over. 
 - It checks for winning conditions in rows, columns, and diagonals, as well as for a draw condition.
 
-![alt text](documents/images/player-turn.png)
+![alt text](documentation/images/player-turn.png)
 
 ### Game Rules: ###
 
 - Displays the set of rules of the game
 
-![alt text](documents/images/rules.png)
+![alt text](documentation/images/rules.png)
 
 ### Computer Move: ###
 
 - This function is responsible for executing the logic that determines the computer player's move.
 - After checking if the computer can win on its next move, if not, it blocks the player from winning, and if neither, it makes a random move.
 
-![alt text](documents/images/game.png)
+![alt text](documentation/images/game.png)
 
 ### Main Game Loop ###
 
@@ -145,11 +154,11 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - Each game consists of alternating, player and computer turns until a win or draw.
 - At the end of every game, the system prompts the player to ask if they would like to play again.
 
-![alt text](documents/images/draw.png)
+![alt text](documentation/images/draw.png)
 
-![alt text](documents/images/player-win.png)
+![alt text](documentation/images/player-win.png)
 
-![alt text](documents/images/no.png)
+![alt text](documentation/images/no.png)
 
 ### Input Validation: ###
 
@@ -157,34 +166,34 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - Name input only accepts alphabetic characters.
 - Move input only accepts integers from 1 to 9 and checks if the chosen position is empty.
 
-![alt text](documents/images/name.png)
+![alt text](documentation/images/name.png)
 
-![alt text](documents/images/input1-9.png)
+![alt text](documentation/images/input1-9.png)
 
 ### Input Responses Error ###
 
 - Press 1 and Press 2 if press 3 upward/special characters are Invalid choices.
 
-![alt text](documents/images/press.png)
+![alt text](documentation/images/press.png)
 
 - Input for their name and enter by number and special characters are Invalid choices.
 
-![alt text](documents/images/Invalidchoice.png)
+![alt text](documentation/images/Invalidchoice.png)
 
 - Enter a number from 1-9 the cell is already occupied.
 
-![alt text](documents/images/tryagain.png)
+![alt text](documentation/images/tryagain.png)
 
 - Enter a number from 1-9, letters and special characters are Invalid input.
 
-![alt text](documents/images/inputerror.png)
+![alt text](documentation/images/inputerror.png)
 
 ### Styling with Colorama: ###
 
 - The colorama library is used for coloring the console output, enhancing the visual appeal of the game.
 - Different colours are used for headers, prompts, and game status messages, making them more distinguishable and engaging.
 
-![alt text](documents/images/colour.png)
+![alt text](documentation/images/colour.png)
 
 # Technologies Used #
 
@@ -198,13 +207,13 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 - [How to Print Colored Text in Python](https://www.youtube.com/watch?v=u51Zjlnui4Y)
 
     * Install Colorama using this terminal command: pip3 install colorama
-    ![alt text](<documents/images/install-colorama.png>)
+    ![alt text](<documentation/images/install-colorama.png>)
 
     * When installing packages to be added to requirements.txt, type 'pip3 freeze > requirements.txt' in the terminal.
     [Pip Freeze > Requirements.txt](https://dev.to/eskabore/pip-freeze-requirementstxt-a-beginners-guide-5e2m)
 
     * To start the game, run the following command in terminal
-    ![alt text](documents/images/python3-run.py.png)
+    ![alt text](documentation/images/python3-run.py.png)
     [Run Python](https://pythonbasics.org/execute-python-scripts/)
 
 ## Frameworks - Libraries - Programs Used ##
@@ -230,7 +239,7 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 * I used CI Python Linter (https://pep8ci.herokuapp.com) to remove all errors from the code. The code is now error-free and optimized for performance.
 
-![alt text](<documents/testing/ci-python-linter.png>)
+![alt text](<documentation/testing/ci-python-linter.png>)
 
 # Future Plans #
 
@@ -253,17 +262,42 @@ Solved bugs:
 * Had Gitpod files problem and it is repaired by Code Institute Tutor Assistance and Heroku problem but it is repaired, Thanks to Code Institute Tutor Assitance.
 * Please note there is one problem .gitpod.yml were missing files - no clue what happen there, I tried look up everything nothing can fix. ![alt text](documents/images/gitpod.png)
 
-# Deployment #
+# Heroku Deployment
 
-To deploy, I followed step by step instructions from Code Institute Deployment Video
+This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
-* Heroku opened the dashboard
-* Created a new app
-* Connected my Github and chose the needed
-* In setting Config Vars PORT 8000
-* Add buildpacks - Python and nodejs
-* Choose manual deployment and deployed Branch
-* View App
+Deployment steps are as follows, after account setup:
+
+- Select **New** in the top-right corner of your Heroku Dashboard, and select **Create new app** from the dropdown menu.
+- Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
+- From the new app **Settings**, click **Reveal Config Vars**, and set the value of KEY to `PORT`, and the value to `8000` then select *add*.
+- Further down, to support dependencies, select **Add Buildpack**.
+- The order of the buildpacks is important, select `Python` first, then `Node.js` second. (if they are not in this order, you can drag them to rearrange them)
+
+Heroku needs three additional files in order to deploy properly.
+
+- requirements.txt
+- Procfile
+
+You can install this project's **requirements** (where applicable) using:
+
+- `pip3 install -r requirements.txt`
+
+If you have your own packages that have been installed, then the requirements file needs updated using:
+
+- `pip3 freeze --local > requirements.txt`
+
+The **Procfile** can be created with the following command:
+
+- `echo web: node index.js > Procfile`
+
+# Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+
+- `pip3 install -r requirements.txt`.
 
 # Credits #
 
