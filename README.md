@@ -288,7 +288,7 @@ Solved bugs:
 * Had Gitpod files problem and it is repaired by Code Institute Tutor Assistance and Heroku problem but it is repaired, Thanks to Code Institute Tutor Assitance.
 * Please note there is one problem .gitpod.yml were missing files - no clue what happen there, I tried look up everything nothing can fix. ![alt text](documentation/images/gitpod.png)
 
-# Heroku Deployment
+# Heroku Deployment #
 
 This project uses [Heroku](https://www.heroku.com), a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
 
@@ -317,7 +317,7 @@ The **Procfile** can be created with the following command:
 
 - `echo web: node index.js > Procfile`
 
-# Local Deployment
+# Local Deployment #
 
 This project can be cloned or forked in order to make a local copy on your own system.
 
@@ -334,3 +334,8 @@ For either method, you will need to install any applicable packages found within
 * [w3School for Name use isalpha](https://www.w3schools.com/python/ref_string_isalpha.asp)
 * [Name 10 Character](https://realpython.com/len-python-function/)
 * [Lowercase a String](https://www.freecodecamp.org/news/python-to-lowercase-a-string-str-lower-example/)
+
+# Acknowledgements #
+
+* I would like to thank my Code Institute mentor, Rory for his support throughout the development of this project.
+* I would like to that the Code Institute Tutor support team for their assistance with troubleshooting and debugging some project issues.
