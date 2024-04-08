@@ -286,7 +286,7 @@ Solved bugs:
 * Had inputs were not handled properly, leading to unexpected behavior or crashes.
 * Had Heroku bug and it is now fixed.
 * Had Gitpod files problem and it is repaired by Code Institute Tutor Assistance and Heroku problem but it is repaired, Thanks to Code Institute Tutor Assitance.
-* Please note there is one problem .gitpod.yml were missing files - no clue what happen there, I tried look up everything nothing can fix. ![alt text](documents/images/gitpod.png)
+* Please note there is one problem .gitpod.yml were missing files - no clue what happen there, I tried look up everything nothing can fix. ![alt text](documentation/images/gitpod.png)
 
 # Heroku Deployment
 
