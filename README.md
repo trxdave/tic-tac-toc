@@ -50,66 +50,92 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 [Emoji](https://emojidb.org/tic-tac-toe-emojis)
 
-## Flowchart ##
+## Flowchart and Python coding ##
 
 ![alt text](documentation/flowchart/chart.png)
 
 - ### Start: ###
     This is the beginning stage of the Tic Tac Toe game.
 
+    ![alt text](documentation/images/intro.png)
+
 - ### Initialize Game: ###
     During game initialization, the environment is prepared, which includes setting up the game board and variables.
+
+    ![alt text](documentation/images/ingame.png)
 
 - ### Main Game Loop: ###
     The main game loop runs until the game ends.
 
+    ![alt text](documentation/images/main.png)
+
 - ### Get Player Name: ###
     The player is to enter their name.
+
+    ![alt text](documentation/images/namec.png)
 
 - ### Game Introduction: ###
     Display the game introduction with rules and instructions to the player.
 
+    ![alt text](documentation/images/instruction.png)
+
+    ![alt text](documentation/images/gamerules.png)
+
 - ### Game Board: ###
     Show the game board status to the player.
+
+    ![alt text](documentation/images/printboard.png)
 
 - ### Player's Turn: ###
     Player's turn. Place ❌ or 😠 in an unoccupied spot.
 
+    ![alt text](documentation/images/turn.png)
+
 - ### Update Board: ### 
-    The player's move updates the game board.
+    The computer's move updates the game board.
+
+    ![alt text](documentation/images/computer.png)
 
 - ### Check for Win/Draw: ###
     The program checks for a win by either a player or a draw.
 
+    ![alt text](documentation/images/check.png)
+
 - ### Win or Draw: ###
     If the game ends in a win or draw, this step handles the outcome.
+
+    ![alt text](documentation/images/result.png)
 
 - ### Play Again?: ###
     After the game ends, players can choose to restart from the beginning.
 
+    ![alt text](documentation/images/playagain.png)
+
 - ### Continue Game: ###
-    Players switch turns if the game continues.
+    Players switch turns if the game continues.(Look at flowchart)
 
 - ### Switch Players: ###
-    Players must take turns making moves.
+    Players must take turns making moves.(Look at flowchart)
 
 - ### Computer's Turn: ###
-    The program calculates the computer's move based on a predetermined strategy during its turn.
+    The program calculates the computer's move based on a predetermined strategy during its turn. (Look at flowchart)
 
 - ### Update Board: ###
-    The game board is updated after the computer's move, like the player's turn.
+    The game board is updated after the computer's move, like the player's turn. (Look at flowchart)
 
 - ### Check for Win/Draw: ###
-    Checks if either player won or if it's a draw.
+    Checks if either player won or if it's a draw. (Look at flowchart)
 
 - ### Win or Draw: ###
-    Handle the outcome when a player wins or the game ends in a draw.
+    Handle the outcome when a player wins or the game ends in a draw. (Look at flowchart)
 
 - ### Play Again?: ### 
-    Players can choose to play again once the game is over.
+    Players can choose to play again once the game is over. (Look at flowchart)
 
 - ### End: ### 
     The flowchart ends here and so does the Tic Tac Toe game.
+
+    ![alt text](documentation/images/end.png)
 
 ## Features ##
 
