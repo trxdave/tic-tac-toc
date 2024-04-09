@@ -307,11 +307,11 @@ Heroku needs three additional files in order to deploy properly.
 
 You can install this project's **requirements** (where applicable) using:
 
-- `pip3 install -r requirements.txt`
+- `pip3 install requirements.txt`
 
 If you have your own packages that have been installed, then the requirements file needs updated using:
 
-- `pip3 freeze --local > requirements.txt`
+- `pip3 freeze > requirements.txt`
 
 The **Procfile** can be created with the following command:
 
