@@ -221,6 +221,9 @@ The Tic Tac Toe Emojis package provides emojis for the game and allows them to b
 
 ![alt text](documentation/images/colour.png)
 
+* Install Colorama using this terminal command: pip3 install colorama
+    ![alt text](<documentation/images/install-colorama.png>)
+
 # Technologies Used #
 
 ## Languages Used ##
